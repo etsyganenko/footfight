@@ -14,6 +14,10 @@ class FFMatch: NSObject {
     
     var homeTeamName: String!
     var awayTeamName: String!
+    
+    var homeTeamGoals: String!
+    var awayTeamGoals: String!
+    
     var date: NSDate!
     
     // MARK: - Initialization
