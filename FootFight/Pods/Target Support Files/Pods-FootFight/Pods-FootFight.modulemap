@@ -1,0 +1,6 @@
+framework module Pods_FootFight {
+  umbrella header "Pods-FootFight-umbrella.h"
+
+  export *
+  module * { export * }
+}
