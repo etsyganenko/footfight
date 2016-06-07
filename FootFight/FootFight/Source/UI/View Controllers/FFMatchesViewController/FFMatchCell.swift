@@ -12,8 +12,22 @@ class FFMatchCell: UITableViewCell {
     
     // MARK: - Accessors
     
-    @IBOutlet var homeTeamLabel: UILabel?
-    @IBOutlet var awayTeamLabel: UILabel?
+    var match: FFMatch!
     
+    @IBOutlet var homeTeamNameLabel: UILabel?
+    @IBOutlet var awayTeamNameLabel: UILabel?
+    
+    @IBOutlet var homeTeamGoalsLabel: UILabel?
+    @IBOutlet var awayTeamGoalsLabel: UILabel?
+    
+    @IBOutlet var homeTeamGoalsPredictionLabel: UILabel?
+    @IBOutlet var awayTeamGoalsPredictionLabel: UILabel?
+    
+    @IBOutlet var scoreLabel: UILabel?
+    
+    func fillWithModel(model: FFMatch) {
+        self.homeTeamNameLabel?.text = model.homeTeamName
+        self.awayTeamNameLabel?.text = model.awayTeamName
+    }
     
 }

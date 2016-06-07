@@ -6,7 +6,13 @@
 //  Copyright © 2016 Genek. All rights reserved.
 //
 
-class FFMatchesViewController: FFViewController {
+import UIKit
+
+class FFMatchesViewController: FFViewController,
+                                NSFetchedResultsControllerDelegate,
+                                UITableViewDataSource,
+                                UITableViewDelegate
+{
     
     // MARK: - Accessors
     
@@ -17,6 +23,20 @@ class FFMatchesViewController: FFViewController {
         
         return matchesView as? FFMatchesView
     }
+    
+    lazy var fetchedResultsController: NSFetchedResultsController = {
+        let fetchRequest = NSFetchRequest(entityName: kFFMatchEntityName)
+
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: kFFDateKey, ascending: true)]
+        
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
+                                                                  managedObjectContext: NSManagedObjectContext.MR_defaultContext(),
+                                                                  sectionNameKeyPath: nil,
+                                                                  cacheName: nil)
+        fetchedResultsController.delegate = self
+        
+        return fetchedResultsController
+    }()
     
     override var contextWillLoadHandler: FFNotificationHandler! {
         get {
@@ -51,10 +71,44 @@ class FFMatchesViewController: FFViewController {
         super.viewDidLoad()
         
         self.context = FFMatchesContext()
+        
+        do {
+            try self.fetchedResultsController.performFetch()
+        } catch {
+            print("Error")
+        }
     }
     
     // MARK: - User Interaction
     
     // MARK: - Public
+    
+    // MARK: - UITableViewDataSource
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let section = self.fetchedResultsController.sections?[section] else {
+            return 0
+        }
+        
+        return section.numberOfObjects
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let matchCell = tableView.dequeueReusableCellWithIdentifier("FFMatchCell") as! FFMatchCell
+        
+        let sections = self.fetchedResultsController.sections
+        let section = sections![indexPath.section] as NSFetchedResultsSectionInfo
+        let model = section.objects![indexPath.row] as! FFMatch
+
+        matchCell.fillWithModel(model)
+        
+        return matchCell
+    }
+    
+    // MARK: - UITableViewDelegate
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
     
 }

@@ -29,20 +29,43 @@ class FFMatchesContext: FFContext {
             return
         }
         
-        guard let matches = dictionary["fixtures"] as? NSArray else {
+        guard let matches = dictionary[kFFFixturesKey] as? NSArray else {
             return
         }
         
         for match in matches {
-            guard let homeTeamName = match["homeTeamName"] else {
+            guard let homeTeamName = match[kFFHomeTeamNameKey] as? String else {
                 return
             }
             
-            guard let awayTeamName = match["awayTeamName"] else {
+            guard let awayTeamName = match[kFFAwayTeamNameKey] as? String else {
                 return
             }
             
+            guard let dateString = match[kFFDateKey] as? String else {
+                return
+            }
             
+            let dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = dateFormat
+            
+            let date = dateFormatter.dateFromString(dateString)! as NSDate
+            
+            guard let matchDay = match[kFFMatchdayKey] as? Int else {
+                return
+            }
+            
+            let matchID = String(matchDay).stringByAppendingString(homeTeamName).stringByAppendingString(awayTeamName)
+            
+            NSManagedObjectContext.MR_defaultContext().MR_saveWithBlockAndWait({ (localContext : NSManagedObjectContext!) in
+                let match = FFMatch.MR_findFirstOrCreateByAttribute(kFFMatchIDKey, withValue: matchID, inContext: localContext)
+                
+                match.homeTeamName = homeTeamName
+                match.awayTeamName = awayTeamName
+                match.matchDay = matchDay
+                match.date = date
+            })
         }
     }
     

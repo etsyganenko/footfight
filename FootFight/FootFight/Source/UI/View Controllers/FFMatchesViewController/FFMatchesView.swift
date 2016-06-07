@@ -9,5 +9,7 @@
 import UIKit
 
 class FFMatchesView: UIView {
+    
+    @IBOutlet var tableView: UITableView!
 
 }
