@@ -40,6 +40,7 @@ class FFContext: FRVObservableObject {
                 print("JSON: \(JSON)")
                 
                 self.fillModelWithResponse(JSON)
+                self.state = FFContextState.FFContextDidLoad.rawValue
             }
         }
     }
