@@ -2,7 +2,7 @@
 //  FFMatch+CoreDataProperties.m
 //  FootFight
 //
-//  Created by Artem on 6/7/16.
+//  Created by Genek on 6/7/16.
 //  Copyright © 2016 Genek. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu

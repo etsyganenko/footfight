@@ -2,7 +2,7 @@
 //  FFMatchesViewController.swift
 //  FootFight
 //
-//  Created by Artem on 6/6/16.
+//  Created by Genek on 6/6/16.
 //  Copyright © 2016 Genek. All rights reserved.
 //
 
@@ -98,16 +98,10 @@ class FFMatchesViewController: FFViewController,
             return nil
         }
         
-        let model = sectionInfo.objects?.first as! FFMatch
-        let date = model.date
-        let matchDay = sectionInfo.name
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "dd.MM.yyyy"
-        let dateString = dateFormatter.stringFromDate(date!)
+        let model = sectionInfo.objects?.first as! FFMatch        
+        let title = model.matchType as String
         
-        let title = NSString(format: "Тур %@ %@", matchDay, dateString)
-        
-        return title as String
+        return title
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

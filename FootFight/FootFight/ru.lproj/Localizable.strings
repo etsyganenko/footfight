@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  FootFight
+
+  Created by Genek on 6/8/16.
+  Copyright © 2016 Genek. All rights reserved.
+*/
+
+"GroupStage"        = "Групповой турнир";
+"Final"             = "Финал";
+"Matchday"          = "Тур";
+"18Final"           = "1/8 финала";
+"14Final"           = "1/4 финала";
+"12Final"           = "1/2 финала";

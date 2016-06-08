@@ -2,7 +2,7 @@
 //  FFMatchCell.swift
 //  FootFight
 //
-//  Created by Artem on 6/6/16.
+//  Created by Genek on 6/6/16.
 //  Copyright © 2016 Genek. All rights reserved.
 //
 
@@ -24,10 +24,17 @@ class FFMatchCell: UITableViewCell {
     @IBOutlet var awayTeamGoalsPredictionLabel: UILabel?
     
     @IBOutlet var scoreLabel: UILabel?
+    @IBOutlet var matchDateLabel: UILabel?
     
     func fillWithModel(model: FFMatch) {
         self.homeTeamNameLabel?.text = model.homeTeamName
         self.awayTeamNameLabel?.text = model.awayTeamName
+        
+        let dateFormat = "dd.MM HH:mm"
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = dateFormat
+        
+        self.matchDateLabel?.text = dateFormatter.stringFromDate(model.date!)
     }
     
 }
