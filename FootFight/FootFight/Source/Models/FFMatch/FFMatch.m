@@ -12,4 +12,14 @@
 
 @implementation FFMatch
 
+@dynamic matchType;
+
+- (NSString *)matchType {
+    return nil;
+}
+
+- (NSArray *)matchTypes {
+    return @[@"Group stage"];
+}
+
 @end

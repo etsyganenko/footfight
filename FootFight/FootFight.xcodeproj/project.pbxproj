@@ -24,6 +24,7 @@
 		8AC944441D06AC8100791FC8 /* FootFight.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8AC944421D06AC8100791FC8 /* FootFight.xcdatamodeld */; };
 		8AC9444A1D06AD4F00791FC8 /* FFMatch+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC944471D06AD4F00791FC8 /* FFMatch+CoreDataProperties.m */; };
 		8AC9444B1D06AD4F00791FC8 /* FFMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC944491D06AD4F00791FC8 /* FFMatch.m */; };
+		8AC944821D08171100791FC8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AC944811D08171100791FC8 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		8AC944471D06AD4F00791FC8 /* FFMatch+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FFMatch+CoreDataProperties.m"; sourceTree = "<group>"; };
 		8AC944481D06AD4F00791FC8 /* FFMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMatch.h; sourceTree = "<group>"; };
 		8AC944491D06AD4F00791FC8 /* FFMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMatch.m; sourceTree = "<group>"; };
+		8AC944811D08171100791FC8 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		E542C81D1406C214088C5B37 /* Pods-FootFight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootFight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FootFight/Pods-FootFight.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +99,7 @@
 				8AC943EF1D056D2200791FC8 /* AppDelegate.swift */,
 				8AC943F01D056D2200791FC8 /* Info.plist */,
 				8AC944451D06AD4E00791FC8 /* FootFight-Bridging-Header.h */,
+				8AC944811D08171100791FC8 /* Localizable.strings */,
 				8AC943F11D056D2200791FC8 /* Resources */,
 				8AC943F31D056D2200791FC8 /* Source */,
 			);
@@ -306,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AC944821D08171100791FC8 /* Localizable.strings in Resources */,
 				8AC944011D056D2200791FC8 /* LaunchScreen.storyboard in Resources */,
 				8AC944001D056D2200791FC8 /* Assets.xcassets in Resources */,
 				8AC943FF1D056D2200791FC8 /* Info.plist in Resources */,

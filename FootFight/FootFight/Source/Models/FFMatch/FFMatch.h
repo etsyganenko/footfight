@@ -12,6 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FFMatch : NSManagedObject
+@property (nonatomic, readonly)     NSString    *matchType;
 
 @end
 

@@ -98,7 +98,16 @@ class FFMatchesViewController: FFViewController,
             return nil
         }
         
-        return sectionInfo.name
+        let model = sectionInfo.objects?.first as! FFMatch
+        let date = model.date
+        let matchDay = sectionInfo.name
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        let dateString = dateFormatter.stringFromDate(date!)
+        
+        let title = NSString(format: "Тур %@ %@", matchDay, dateString)
+        
+        return title as String
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -141,8 +150,10 @@ class FFMatchesViewController: FFViewController,
         switch(type) {
             case .Insert:
                 tableView.insertSections(NSIndexSet(index: sectionIndex), withRowAnimation: UITableViewRowAnimation.Fade)
+            
             case .Delete:
                 tableView.deleteSections(NSIndexSet(index: sectionIndex), withRowAnimation: UITableViewRowAnimation.Fade)
+            
             default:
                 break
         }
@@ -163,10 +174,12 @@ class FFMatchesViewController: FFViewController,
                 if let newIndexPath = newIndexPath {
                     tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation:UITableViewRowAnimation.Fade)
                 }
+            
             case .Delete:
                 if let indexPath = indexPath {
                     tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
                 }
+            
             case .Update:
                 if let indexPath = indexPath {
                     guard let cell = tableView.cellForRowAtIndexPath(indexPath) as? FFMatchCell else {
@@ -179,6 +192,7 @@ class FFMatchesViewController: FFViewController,
                     
                     cell.fillWithModel(model)
                 }
+            
             case .Move:
                 if let indexPath = indexPath {
                     if let newIndexPath = newIndexPath {
