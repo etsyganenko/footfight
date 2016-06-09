@@ -88,4 +88,12 @@ class FFMatchCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSource
         
         return NSAttributedString(string: title, attributes: [NSParagraphStyleAttributeName : paragraphStyle])
     }
+    
+    func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 50.0;
+    }
+    
+    func pickerView(pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+        return 50.0;
+    }
 }
