@@ -2,7 +2,7 @@
 //  FFMatch+CoreDataProperties.h
 //  FootFight
 //
-//  Created by Genek on 6/7/16.
+//  Created by Artem on 6/9/16.
 //  Copyright © 2016 Genek. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -15,13 +15,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FFMatch (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSString *matchID;
-@property (nullable, nonatomic, retain) NSString *awayTeamName;
-@property (nullable, nonatomic, retain) NSString *homeTeamName;
-@property (nullable, nonatomic, retain) NSNumber *homeTeamGoals;
 @property (nullable, nonatomic, retain) NSNumber *awayTeamGoals;
-@property (nullable, nonatomic, retain) NSDate *date;
-@property (nullable, nonatomic, retain) NSNumber *matchDay;
+@property (nullable, nonatomic, retain) NSString *awayTeamName;
+@property (nullable, nonatomic, retain) NSDate *matchDate;
+@property (nullable, nonatomic, retain) NSNumber *homeTeamGoals;
+@property (nullable, nonatomic, retain) NSString *homeTeamName;
+@property (nullable, nonatomic, retain) NSNumber *matchday;
+@property (nullable, nonatomic, retain) NSString *matchID;
+@property (nullable, nonatomic, retain) NSNumber *homeTeamGoalsPrediction;
+@property (nullable, nonatomic, retain) NSNumber *awayTeamGoalsPrediction;
 
 @end
 

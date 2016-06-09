@@ -27,11 +27,11 @@ class FFMatchesViewController: FFViewController,
     lazy var fetchedResultsController: NSFetchedResultsController = {
         let fetchRequest = NSFetchRequest(entityName: kFFMatchEntityName)
 
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: kFFDateKey, ascending: true)]
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: kFFMatchDateKey, ascending: true)]
         
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
                                                                   managedObjectContext: NSManagedObjectContext.MR_defaultContext(),
-                                                                  sectionNameKeyPath: "matchDay",
+                                                                  sectionNameKeyPath: kFFMatchdayKey,
                                                                   cacheName: nil)
         fetchedResultsController.delegate = self
         
@@ -195,6 +195,8 @@ class FFMatchesViewController: FFViewController,
                     }
                 }
         }
+        
+        self.updateTotalScore()
     }
     
     func controllerWillChangeContent(controller: NSFetchedResultsController) {
@@ -203,5 +205,11 @@ class FFMatchesViewController: FFViewController,
     
     func controllerDidChangeContent(controller: NSFetchedResultsController) {
         self.mainView?.tableView.endUpdates()
+    }
+    
+    func updateTotalScore() -> () {
+        let user = FFUser.MR_findFirstOrCreateByAttribute(kFFUserIDKey, withValue: "1")
+        
+        self.mainView?.totalScoreLabel?.text = String(format: "Total score: %d", user.totalScore())
     }
 }

@@ -2,14 +2,20 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15E65" minimumToolsVersion="Xcode 7.0">
     <entity name="FFMatch" representedClassName="FFMatch" syncable="YES">
         <attribute name="awayTeamGoals" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="awayTeamGoalsPrediction" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="awayTeamName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="homeTeamGoals" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="homeTeamGoalsPrediction" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="homeTeamName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="matchDay" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="matchDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="matchday" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="matchID" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="FFUser" representedClassName="FFUser" syncable="YES">
+        <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="FFMatch" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="FFMatch" positionX="-63" positionY="-18" width="128" height="180"/>
+        <element name="FFUser" positionX="-54" positionY="63" width="128" height="60"/>
     </elements>
 </model>

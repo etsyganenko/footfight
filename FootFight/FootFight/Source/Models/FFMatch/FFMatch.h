@@ -11,8 +11,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSUInteger, FFPredictionResult) {
+    FFPredictionResultNone,
+    FFPredictionScoreCorrect,
+    FFPredictionResultCorrect,
+    FFPredictionWrong
+};
+
 @interface FFMatch : NSManagedObject
-@property (nonatomic, readonly)     NSString    *matchType;
+@property (nonatomic, readonly)     NSString        *matchType;
+@property (nonatomic, readonly)     NSString        *matchScore;
+
+@property (nonatomic, readonly)     NSUInteger      userScore;
+@property (nonatomic, readonly)     NSString        *userScoreString;
 
 @end
 

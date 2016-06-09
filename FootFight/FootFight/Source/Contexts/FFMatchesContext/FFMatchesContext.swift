@@ -25,47 +25,51 @@ class FFMatchesContext: FFContext {
     // MARK: - Public
     
     override func fillModelWithResponse(response: AnyObject) {
-        guard let dictionary = response as? NSDictionary else {
-            return
-        }
-        
-        guard let matches = dictionary[kFFFixturesKey] as? NSArray else {
-            return
-        }
-        
-        for match in matches {
-            guard let homeTeamName = match[kFFHomeTeamNameKey] as? String else {
-                return
+        if let dictionary = response as? NSDictionary {
+            if let matches = dictionary[kFFFixturesKey] as? NSArray {
+                for matchDictionary in matches {
+                    guard let homeTeamName = matchDictionary[kFFHomeTeamNameKey] as? String else {
+                        return
+                    }
+                    
+                    guard let awayTeamName = matchDictionary[kFFAwayTeamNameKey] as? String else {
+                        return
+                    }
+                    
+                    guard let matchDateString = matchDictionary[kFFDateKey] as? String else {
+                        return
+                    }
+                    
+                    let dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+                    let dateFormatter = NSDateFormatter()
+                    dateFormatter.dateFormat = dateFormat
+                    
+                    let matchDate = dateFormatter.dateFromString(matchDateString)! as NSDate
+                    
+                    guard let matchday = matchDictionary[kFFMatchdayKey] as? NSNumber else {
+                        return
+                    }
+                    
+                    let matchID = String(matchday).stringByAppendingString(homeTeamName).stringByAppendingString(awayTeamName)
+                    
+                    NSManagedObjectContext.MR_defaultContext().MR_saveWithBlockAndWait({ (localContext : NSManagedObjectContext!) in
+                        let match = FFMatch.MR_findFirstOrCreateByAttribute(kFFMatchIDKey, withValue: matchID, inContext: localContext)
+                        
+                        match.homeTeamName = homeTeamName
+                        match.awayTeamName = awayTeamName
+                        match.matchday = matchday
+                        match.matchDate = matchDate
+                        
+                        if let homeTeamGoals = matchDictionary[kFFGoalsHomeTeamKey] as? NSNumber {
+                            match.homeTeamGoals = homeTeamGoals
+                        }
+                        
+                        if let awayTeamGoals = matchDictionary[kFFGoalsAwayTeamKey] as? NSNumber {
+                            match.awayTeamGoals = awayTeamGoals
+                        }
+                    })
+                }
             }
-            
-            guard let awayTeamName = match[kFFAwayTeamNameKey] as? String else {
-                return
-            }
-            
-            guard let dateString = match[kFFDateKey] as? String else {
-                return
-            }
-            
-            let dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-            let dateFormatter = NSDateFormatter()
-            dateFormatter.dateFormat = dateFormat
-            
-            let date = dateFormatter.dateFromString(dateString)! as NSDate
-            
-            guard let matchDay = match[kFFMatchdayKey] as? Int else {
-                return
-            }
-            
-            let matchID = String(matchDay).stringByAppendingString(homeTeamName).stringByAppendingString(awayTeamName)
-            
-            NSManagedObjectContext.MR_defaultContext().MR_saveWithBlockAndWait({ (localContext : NSManagedObjectContext!) in
-                let match = FFMatch.MR_findFirstOrCreateByAttribute(kFFMatchIDKey, withValue: matchID, inContext: localContext)
-                
-                match.homeTeamName = homeTeamName
-                match.awayTeamName = awayTeamName
-                match.matchDay = matchDay
-                match.date = date
-            })
         }
     }
     

@@ -2,7 +2,7 @@
 //  FFMatch+CoreDataProperties.m
 //  FootFight
 //
-//  Created by Genek on 6/7/16.
+//  Created by Artem on 6/9/16.
 //  Copyright © 2016 Genek. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -13,12 +13,14 @@
 
 @implementation FFMatch (CoreDataProperties)
 
-@dynamic matchID;
-@dynamic awayTeamName;
-@dynamic homeTeamName;
-@dynamic homeTeamGoals;
 @dynamic awayTeamGoals;
-@dynamic date;
-@dynamic matchDay;
+@dynamic awayTeamName;
+@dynamic matchDate;
+@dynamic homeTeamGoals;
+@dynamic homeTeamName;
+@dynamic matchday;
+@dynamic matchID;
+@dynamic homeTeamGoalsPrediction;
+@dynamic awayTeamGoalsPrediction;
 
 @end

@@ -10,7 +10,7 @@ import UIKit
 
 class FFMatchesView: UIView {
     
-    @IBOutlet var headerView: UIView!
+    @IBOutlet var totalScoreLabel: UILabel?
+    
     @IBOutlet var tableView: UITableView!
-
 }
