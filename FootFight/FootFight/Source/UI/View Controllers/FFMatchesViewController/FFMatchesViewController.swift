@@ -16,6 +16,8 @@ class FFMatchesViewController: FFViewController,
     
     // MARK: - Accessors
     
+    var model: FFUser?
+    
     var mainView: FFMatchesView? {
         guard let matchesView = self.view else {
             return nil
@@ -77,6 +79,7 @@ class FFMatchesViewController: FFViewController,
         }
         
         self.context = FFMatchesContext()
+        self.model = FFUser.MR_findFirstOrCreateByAttribute(kFFUserIDKey, withValue: kFFUserID)
     }
     
     // MARK: - User Interaction
@@ -196,7 +199,7 @@ class FFMatchesViewController: FFViewController,
                 }
         }
         
-        self.updateTotalScore()
+        self.fillWithModel(self.model!)
     }
     
     func controllerWillChangeContent(controller: NSFetchedResultsController) {
@@ -207,9 +210,7 @@ class FFMatchesViewController: FFViewController,
         self.mainView?.tableView.endUpdates()
     }
     
-    func updateTotalScore() -> () {
-        let user = FFUser.MR_findFirstOrCreateByAttribute(kFFUserIDKey, withValue: "1")
-        
-        self.mainView?.totalScoreLabel?.text = String(format: "Total score: %d", user.totalScore())
+    func fillWithModel(model: FFUser!) -> () {
+        self.mainView?.totalScoreLabel?.text = String(format: "Total score: %d", model.totalScore())
     }
 }
