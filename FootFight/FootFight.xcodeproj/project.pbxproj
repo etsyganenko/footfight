@@ -20,13 +20,13 @@
 		8AC944231D05980A00791FC8 /* FFMatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC944221D05980A00791FC8 /* FFMatchesView.swift */; };
 		8AC9443E1D05BA9D00791FC8 /* FFMatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9443D1D05BA9D00791FC8 /* FFMatchCell.swift */; };
 		8AC944441D06AC8100791FC8 /* FootFight.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8AC944421D06AC8100791FC8 /* FootFight.xcdatamodeld */; };
-		8AC9444A1D06AD4F00791FC8 /* FFMatch+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC944471D06AD4F00791FC8 /* FFMatch+CoreDataProperties.m */; };
-		8AC9444B1D06AD4F00791FC8 /* FFMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC944491D06AD4F00791FC8 /* FFMatch.m */; };
 		8AC944831D0819F900791FC8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AC944851D0819F900791FC8 /* Localizable.strings */; };
 		8AC944861D081A0D00791FC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AC944881D081A0D00791FC8 /* Main.storyboard */; };
 		8AC9448C1D081A5100791FC8 /* FFUIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9448B1D081A5100791FC8 /* FFUIConstants.swift */; };
 		8AC945201D09B67000791FC8 /* FFUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9451E1D09B67000791FC8 /* FFUser+CoreDataProperties.swift */; };
 		8AC945211D09B67000791FC8 /* FFUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9451F1D09B67000791FC8 /* FFUser.swift */; };
+		8AC945241D0AAC9E00791FC8 /* FFMatch+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC945221D0AAC9E00791FC8 /* FFMatch+CoreDataProperties.swift */; };
+		8AC945251D0AAC9E00791FC8 /* FFMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC945231D0AAC9E00791FC8 /* FFMatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,11 +46,6 @@
 		8AC944221D05980A00791FC8 /* FFMatchesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFMatchesView.swift; sourceTree = "<group>"; };
 		8AC9443D1D05BA9D00791FC8 /* FFMatchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFMatchCell.swift; sourceTree = "<group>"; };
 		8AC944431D06AC8100791FC8 /* FootFight.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FootFight.xcdatamodel; sourceTree = "<group>"; };
-		8AC944451D06AD4E00791FC8 /* FootFight-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "FootFight-Bridging-Header.h"; path = "Source/Models/FFMatch/FootFight-Bridging-Header.h"; sourceTree = "<group>"; };
-		8AC944461D06AD4F00791FC8 /* FFMatch+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FFMatch+CoreDataProperties.h"; sourceTree = "<group>"; };
-		8AC944471D06AD4F00791FC8 /* FFMatch+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FFMatch+CoreDataProperties.m"; sourceTree = "<group>"; };
-		8AC944481D06AD4F00791FC8 /* FFMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMatch.h; sourceTree = "<group>"; };
-		8AC944491D06AD4F00791FC8 /* FFMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMatch.m; sourceTree = "<group>"; };
 		8AC944841D0819F900791FC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8AC944871D081A0D00791FC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8AC944891D081A1900791FC8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -58,6 +53,8 @@
 		8AC9448D1D081CAD00791FC8 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8AC9451E1D09B67000791FC8 /* FFUser+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FFUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8AC9451F1D09B67000791FC8 /* FFUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFUser.swift; sourceTree = "<group>"; };
+		8AC945221D0AAC9E00791FC8 /* FFMatch+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FFMatch+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8AC945231D0AAC9E00791FC8 /* FFMatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFMatch.swift; sourceTree = "<group>"; };
 		E542C81D1406C214088C5B37 /* Pods-FootFight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootFight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FootFight/Pods-FootFight.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,7 +102,6 @@
 			children = (
 				8AC943EF1D056D2200791FC8 /* AppDelegate.swift */,
 				8AC943F01D056D2200791FC8 /* Info.plist */,
-				8AC944451D06AD4E00791FC8 /* FootFight-Bridging-Header.h */,
 				8AC944851D0819F900791FC8 /* Localizable.strings */,
 				8AC943F11D056D2200791FC8 /* Resources */,
 				8AC943F31D056D2200791FC8 /* Source */,
@@ -241,10 +237,8 @@
 		8AC9443F1D05CB2700791FC8 /* FFMatch */ = {
 			isa = PBXGroup;
 			children = (
-				8AC944461D06AD4F00791FC8 /* FFMatch+CoreDataProperties.h */,
-				8AC944471D06AD4F00791FC8 /* FFMatch+CoreDataProperties.m */,
-				8AC944481D06AD4F00791FC8 /* FFMatch.h */,
-				8AC944491D06AD4F00791FC8 /* FFMatch.m */,
+				8AC945221D0AAC9E00791FC8 /* FFMatch+CoreDataProperties.swift */,
+				8AC945231D0AAC9E00791FC8 /* FFMatch.swift */,
 			);
 			path = FFMatch;
 			sourceTree = "<group>";
@@ -395,16 +389,16 @@
 				8AC944211D0597F100791FC8 /* FFMatchesViewController.swift in Sources */,
 				8AC945211D09B67000791FC8 /* FFUser.swift in Sources */,
 				8AC943FE1D056D2200791FC8 /* AppDelegate.swift in Sources */,
-				8AC9444A1D06AD4F00791FC8 /* FFMatch+CoreDataProperties.m in Sources */,
+				8AC945251D0AAC9E00791FC8 /* FFMatch.swift in Sources */,
 				8AC944441D06AC8100791FC8 /* FootFight.xcdatamodeld in Sources */,
 				8AC944171D05725200791FC8 /* FFMatchesContext.swift in Sources */,
-				8AC9444B1D06AD4F00791FC8 /* FFMatch.m in Sources */,
 				8AC9440B1D056E3D00791FC8 /* FFViewController.swift in Sources */,
 				8AC9441C1D05950D00791FC8 /* FFObservableObject.swift in Sources */,
 				8AC9443E1D05BA9D00791FC8 /* FFMatchCell.swift in Sources */,
 				8AC944231D05980A00791FC8 /* FFMatchesView.swift in Sources */,
 				8AC9448C1D081A5100791FC8 /* FFUIConstants.swift in Sources */,
 				8AC944071D056DA200791FC8 /* FFConstants.swift in Sources */,
+				8AC945241D0AAC9E00791FC8 /* FFMatch+CoreDataProperties.swift in Sources */,
 				8AC944121D056F0500791FC8 /* FFContext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,7 +533,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.genek.footfight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "FootFight/Source/Models/FFMatch/FootFight-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -557,7 +552,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.genek.footfight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "FootFight/Source/Models/FFMatch/FootFight-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};

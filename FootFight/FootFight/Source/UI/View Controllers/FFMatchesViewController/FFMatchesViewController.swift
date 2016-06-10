@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class FFMatchesViewController: FFViewController,
                                 NSFetchedResultsControllerDelegate,
@@ -73,10 +74,12 @@ class FFMatchesViewController: FFViewController,
         do {
             try self.fetchedResultsController.performFetch()
         } catch {
-            print("Error")
+            print("Fetch Error")
         }
         
-//        self.context = FFMatchesContext()
+        self.context = FFMatchesContext()
+        
+        self.updateTotalScore()
     }
     
     // MARK: - User Interaction
@@ -196,9 +199,7 @@ class FFMatchesViewController: FFViewController,
                 }
         }
         
-        let user = FFUser.MR_findFirstOrCreateByAttribute(kFFMatchIDKey, withValue: kFFUserID) as FFUser
-        
-        self.fillWithModel(user)
+        self.updateTotalScore()
     }
     
     func controllerWillChangeContent(controller: NSFetchedResultsController) {
@@ -211,5 +212,13 @@ class FFMatchesViewController: FFViewController,
     
     func fillWithModel(model: FFUser!) -> () {
         self.mainView?.totalScoreLabel?.text = String(format: "Total score: %d", model.totalScore())
+    }
+    
+    // MARK: - Private
+    
+    private func updateTotalScore() -> () {
+        let user = FFUser.MR_findFirstOrCreateByAttribute(kFFUserIDKey, withValue: kFFUserID) as FFUser
+        
+        self.fillWithModel(user)
     }
 }

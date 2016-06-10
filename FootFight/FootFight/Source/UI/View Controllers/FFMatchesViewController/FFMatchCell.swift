@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 enum FFScorePredictionComponents: Int {
     case homeTeamGoals = 0
@@ -35,8 +36,12 @@ class FFMatchCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSource
     // MARK: - Public
     
     func fillWithModel(model: FFMatch) {
-//        self.model = model
+        let matchDate = model.matchDate! as NSDate
+        
         self.matchID = model.matchID
+        
+        self.scorePredictionPickerView.userInteractionEnabled = matchDate == NSDate().laterDate(matchDate)
+        self.scorePredictionPickerView.userInteractionEnabled = model.matchStatus == FFMatchStatus.FFMatchNotStarted
         
         self.homeTeamNameLabel?.text = model.homeTeamName
         self.awayTeamNameLabel?.text = model.awayTeamName
@@ -44,14 +49,14 @@ class FFMatchCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSource
         self.scorePredictionPickerView.selectRow((model.homeTeamGoalsPrediction?.integerValue)!, inComponent: FFScorePredictionComponents.homeTeamGoals.rawValue, animated: false)
         self.scorePredictionPickerView.selectRow((model.awayTeamGoalsPrediction?.integerValue)!, inComponent: FFScorePredictionComponents.awayTeamGoals.rawValue, animated: false)
         
-        self.matchScoreLabel?.text = model.matchScore
-        self.userScoreLabel?.text = model.userScoreString
+        self.matchScoreLabel?.text = model.matchScore as String
+        self.userScoreLabel?.text = model.userScoreString as String
         
         let dateFormat = "dd.MM  HH:mm"
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = dateFormat
         
-        self.matchDateLabel?.text = dateFormatter.stringFromDate(model.matchDate!)
+        self.matchDateLabel?.text = dateFormatter.stringFromDate(matchDate)
     }
     
     // MARK: - UIPickerViewDataSource
@@ -87,7 +92,7 @@ class FFMatchCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSource
         let title = String(self.predictionOptions[row])
         let paragraphStyle = NSMutableParagraphStyle()
         
-        paragraphStyle.alignment = FFScorePredictionComponents.homeTeamGoals.rawValue == component ? NSTextAlignment.Left : NSTextAlignment.Right // NSTextAlignment.Center
+        paragraphStyle.alignment = FFScorePredictionComponents.homeTeamGoals.rawValue == component ? NSTextAlignment.Left : NSTextAlignment.Center
         paragraphStyle.baseWritingDirection = NSWritingDirection.Natural
         
         return NSAttributedString(string: title, attributes: [NSParagraphStyleAttributeName : paragraphStyle])

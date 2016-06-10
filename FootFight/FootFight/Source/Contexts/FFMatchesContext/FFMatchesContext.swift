@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import CoreData
 
 class FFMatchesContext: FFContext {
     
