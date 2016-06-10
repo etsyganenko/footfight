@@ -18,7 +18,7 @@ class FFMatchCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSource
     
     // MARK: - Accessors
     
-    var model: FFMatch!
+    var matchID: String?
     
     @IBOutlet var matchScoreLabel: UILabel?
     
@@ -35,7 +35,8 @@ class FFMatchCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSource
     // MARK: - Public
     
     func fillWithModel(model: FFMatch) {
-        self.model = model
+//        self.model = model
+        self.matchID = model.matchID
         
         self.homeTeamNameLabel?.text = model.homeTeamName
         self.awayTeamNameLabel?.text = model.awayTeamName
@@ -66,24 +67,27 @@ class FFMatchCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSource
     // MARK: - UIPickerViewDelegate
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let model = self.model as FFMatch
         let selectedValue = self.predictionOptions[row]
         
-        switch component {
+        NSManagedObjectContext.MR_defaultContext().MR_saveWithBlock({ (localContext : NSManagedObjectContext!) in
+            let match = FFMatch.MR_findFirstByAttribute(kFFMatchIDKey, withValue: self.matchID!, inContext: localContext)! as FFMatch
+            
+            switch component {
             case FFScorePredictionComponents.homeTeamGoals.rawValue:
-                model.homeTeamGoalsPrediction = selectedValue
+                match.homeTeamGoalsPrediction = selectedValue
             case FFScorePredictionComponents.awayTeamGoals.rawValue:
-                model.awayTeamGoalsPrediction = selectedValue
+                match.awayTeamGoalsPrediction = selectedValue
             default:
                 break
-        }
+            }
+        })
     }
     
     func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         let title = String(self.predictionOptions[row])
         let paragraphStyle = NSMutableParagraphStyle()
         
-        paragraphStyle.alignment = /*FFScorePredictionComponents.homeTeamGoals.rawValue == component ? NSTextAlignment.Right : NSTextAlignment.Left*/NSTextAlignment.Center
+        paragraphStyle.alignment = FFScorePredictionComponents.homeTeamGoals.rawValue == component ? NSTextAlignment.Left : NSTextAlignment.Right // NSTextAlignment.Center
         paragraphStyle.baseWritingDirection = NSWritingDirection.Natural
         
         return NSAttributedString(string: title, attributes: [NSParagraphStyleAttributeName : paragraphStyle])

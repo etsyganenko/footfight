@@ -16,8 +16,6 @@ class FFMatchesViewController: FFViewController,
     
     // MARK: - Accessors
     
-    var model: FFUser?
-    
     var mainView: FFMatchesView? {
         guard let matchesView = self.view else {
             return nil
@@ -78,8 +76,7 @@ class FFMatchesViewController: FFViewController,
             print("Error")
         }
         
-        self.context = FFMatchesContext()
-        self.model = FFUser.MR_findFirstOrCreateByAttribute(kFFUserIDKey, withValue: kFFUserID)
+//        self.context = FFMatchesContext()
     }
     
     // MARK: - User Interaction
@@ -199,7 +196,9 @@ class FFMatchesViewController: FFViewController,
                 }
         }
         
-        self.fillWithModel(self.model!)
+        let user = FFUser.MR_findFirstOrCreateByAttribute(kFFMatchIDKey, withValue: kFFUserID) as FFUser
+        
+        self.fillWithModel(user)
     }
     
     func controllerWillChangeContent(controller: NSFetchedResultsController) {
