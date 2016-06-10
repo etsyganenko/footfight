@@ -61,12 +61,14 @@ class FFMatchesContext: FFContext {
                         match.matchday = matchday
                         match.matchDate = matchDate
                         
-                        if let homeTeamGoals = matchDictionary[kFFGoalsHomeTeamKey] as? NSNumber {
-                            match.homeTeamGoals = homeTeamGoals
-                        }
-                        
-                        if let awayTeamGoals = matchDictionary[kFFGoalsAwayTeamKey] as? NSNumber {
-                            match.awayTeamGoals = awayTeamGoals
+                        if let resultDictionary = matchDictionary["result"] as? NSDictionary {
+                            if let homeTeamGoals = resultDictionary[kFFGoalsHomeTeamKey] as? NSNumber {
+                                match.homeTeamGoals = homeTeamGoals
+                            }
+                            
+                            if let awayTeamGoals = resultDictionary[kFFGoalsAwayTeamKey] as? NSNumber {
+                                match.awayTeamGoals = awayTeamGoals
+                            }
                         }
                     })
                 }
