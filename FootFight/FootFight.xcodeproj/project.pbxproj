@@ -15,7 +15,6 @@
 		8AC9440B1D056E3D00791FC8 /* FFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9440A1D056E3D00791FC8 /* FFViewController.swift */; };
 		8AC944121D056F0500791FC8 /* FFContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9440D1D056F0500791FC8 /* FFContext.swift */; };
 		8AC944171D05725200791FC8 /* FFMatchesContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC944161D05725200791FC8 /* FFMatchesContext.swift */; };
-		8AC9441C1D05950D00791FC8 /* FFObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9441B1D05950D00791FC8 /* FFObservableObject.swift */; };
 		8AC944211D0597F100791FC8 /* FFMatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC944201D0597F100791FC8 /* FFMatchesViewController.swift */; };
 		8AC944231D05980A00791FC8 /* FFMatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC944221D05980A00791FC8 /* FFMatchesView.swift */; };
 		8AC9443E1D05BA9D00791FC8 /* FFMatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9443D1D05BA9D00791FC8 /* FFMatchCell.swift */; };
@@ -27,9 +26,12 @@
 		8AC945211D09B67000791FC8 /* FFUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9451F1D09B67000791FC8 /* FFUser.swift */; };
 		8AC945241D0AAC9E00791FC8 /* FFMatch+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC945221D0AAC9E00791FC8 /* FFMatch+CoreDataProperties.swift */; };
 		8AC945251D0AAC9E00791FC8 /* FFMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC945231D0AAC9E00791FC8 /* FFMatch.swift */; };
-		B0A7D7431D0DC81600DC2BF9 /* FFPredictionAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7D7411D0DC81600DC2BF9 /* FFPredictionAlertController.swift */; };
-		B0A7D7441D0DC81600DC2BF9 /* FFPredictionAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A7D7421D0DC81600DC2BF9 /* FFPredictionAlertController.xib */; };
-		B0A7D7471D0DC8F500DC2BF9 /* FFPredictionAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7D7461D0DC8F500DC2BF9 /* FFPredictionAlert.swift */; };
+		B0BD12E91D0F16C3008D803D /* FFObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BD12E81D0F16C3008D803D /* FFObservableObject.swift */; };
+		B0BD12F31D0F19C8008D803D /* GNKAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BD12F21D0F19C8008D803D /* GNKAlertViewController.swift */; };
+		B0BD12F51D0F19DD008D803D /* GNKAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BD12F41D0F19DD008D803D /* GNKAlertView.swift */; };
+		B0BD12FA1D0F1A6D008D803D /* FFPredictionAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BD12F71D0F1A6D008D803D /* FFPredictionAlertView.swift */; };
+		B0BD12FB1D0F1A6D008D803D /* FFPredictionAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BD12F81D0F1A6D008D803D /* FFPredictionAlertViewController.swift */; };
+		B0BD12FC1D0F1A6D008D803D /* FFPredictionAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0BD12F91D0F1A6D008D803D /* FFPredictionAlertViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +46,6 @@
 		8AC9440A1D056E3D00791FC8 /* FFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFViewController.swift; sourceTree = "<group>"; };
 		8AC9440D1D056F0500791FC8 /* FFContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFContext.swift; sourceTree = "<group>"; };
 		8AC944161D05725200791FC8 /* FFMatchesContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFMatchesContext.swift; sourceTree = "<group>"; };
-		8AC9441B1D05950D00791FC8 /* FFObservableObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFObservableObject.swift; sourceTree = "<group>"; };
 		8AC944201D0597F100791FC8 /* FFMatchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFMatchesViewController.swift; sourceTree = "<group>"; };
 		8AC944221D05980A00791FC8 /* FFMatchesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFMatchesView.swift; sourceTree = "<group>"; };
 		8AC9443D1D05BA9D00791FC8 /* FFMatchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFMatchCell.swift; sourceTree = "<group>"; };
@@ -58,9 +59,12 @@
 		8AC9451F1D09B67000791FC8 /* FFUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFUser.swift; sourceTree = "<group>"; };
 		8AC945221D0AAC9E00791FC8 /* FFMatch+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FFMatch+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8AC945231D0AAC9E00791FC8 /* FFMatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFMatch.swift; sourceTree = "<group>"; };
-		B0A7D7411D0DC81600DC2BF9 /* FFPredictionAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFPredictionAlertController.swift; sourceTree = "<group>"; };
-		B0A7D7421D0DC81600DC2BF9 /* FFPredictionAlertController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFPredictionAlertController.xib; sourceTree = "<group>"; };
-		B0A7D7461D0DC8F500DC2BF9 /* FFPredictionAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFPredictionAlert.swift; sourceTree = "<group>"; };
+		B0BD12E81D0F16C3008D803D /* FFObservableObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFObservableObject.swift; sourceTree = "<group>"; };
+		B0BD12F21D0F19C8008D803D /* GNKAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GNKAlertViewController.swift; sourceTree = "<group>"; };
+		B0BD12F41D0F19DD008D803D /* GNKAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GNKAlertView.swift; sourceTree = "<group>"; };
+		B0BD12F71D0F1A6D008D803D /* FFPredictionAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFPredictionAlertView.swift; sourceTree = "<group>"; };
+		B0BD12F81D0F1A6D008D803D /* FFPredictionAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFPredictionAlertViewController.swift; sourceTree = "<group>"; };
+		B0BD12F91D0F1A6D008D803D /* FFPredictionAlertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFPredictionAlertViewController.xib; sourceTree = "<group>"; };
 		E542C81D1406C214088C5B37 /* Pods-FootFight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootFight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FootFight/Pods-FootFight.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,7 +150,7 @@
 		8AC943F51D056D2200791FC8 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				8AC9441A1D05950D00791FC8 /* FFObservableObject */,
+				B0BD12E61D0F16C3008D803D /* Classes */,
 				8AC943F61D056D2200791FC8 /* Constants */,
 			);
 			path = Library;
@@ -194,7 +198,7 @@
 			children = (
 				8AC944091D056E3D00791FC8 /* FFViewController */,
 				8AC9441D1D05979800791FC8 /* FFMatchesViewController */,
-				B0A7D7451D0DC8B600DC2BF9 /* FFPredictionAlert */,
+				B0BD12F61D0F1A6D008D803D /* FFPredictionAlertViewController */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -223,22 +227,12 @@
 			path = FFMatchesContext;
 			sourceTree = "<group>";
 		};
-		8AC9441A1D05950D00791FC8 /* FFObservableObject */ = {
-			isa = PBXGroup;
-			children = (
-				8AC9441B1D05950D00791FC8 /* FFObservableObject.swift */,
-			);
-			path = FFObservableObject;
-			sourceTree = "<group>";
-		};
 		8AC9441D1D05979800791FC8 /* FFMatchesViewController */ = {
 			isa = PBXGroup;
 			children = (
 				8AC944201D0597F100791FC8 /* FFMatchesViewController.swift */,
 				8AC944221D05980A00791FC8 /* FFMatchesView.swift */,
 				8AC9443D1D05BA9D00791FC8 /* FFMatchCell.swift */,
-				B0A7D7411D0DC81600DC2BF9 /* FFPredictionAlertController.swift */,
-				B0A7D7421D0DC81600DC2BF9 /* FFPredictionAlertController.xib */,
 			);
 			path = FFMatchesViewController;
 			sourceTree = "<group>";
@@ -261,12 +255,40 @@
 			path = FFUser;
 			sourceTree = "<group>";
 		};
-		B0A7D7451D0DC8B600DC2BF9 /* FFPredictionAlert */ = {
+		B0BD12E61D0F16C3008D803D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B0A7D7461D0DC8F500DC2BF9 /* FFPredictionAlert.swift */,
+				B0BD12F11D0F19A7008D803D /* GNKAlertViewController */,
+				B0BD12E71D0F16C3008D803D /* FFObservableObject */,
 			);
-			path = FFPredictionAlert;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B0BD12E71D0F16C3008D803D /* FFObservableObject */ = {
+			isa = PBXGroup;
+			children = (
+				B0BD12E81D0F16C3008D803D /* FFObservableObject.swift */,
+			);
+			path = FFObservableObject;
+			sourceTree = "<group>";
+		};
+		B0BD12F11D0F19A7008D803D /* GNKAlertViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B0BD12F21D0F19C8008D803D /* GNKAlertViewController.swift */,
+				B0BD12F41D0F19DD008D803D /* GNKAlertView.swift */,
+			);
+			path = GNKAlertViewController;
+			sourceTree = "<group>";
+		};
+		B0BD12F61D0F1A6D008D803D /* FFPredictionAlertViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B0BD12F71D0F1A6D008D803D /* FFPredictionAlertView.swift */,
+				B0BD12F81D0F1A6D008D803D /* FFPredictionAlertViewController.swift */,
+				B0BD12F91D0F1A6D008D803D /* FFPredictionAlertViewController.xib */,
+			);
+			path = FFPredictionAlertViewController;
 			sourceTree = "<group>";
 		};
 		DB8A9AF7BC2015321E6BB061 /* Frameworks */ = {
@@ -339,10 +361,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0A7D7441D0DC81600DC2BF9 /* FFPredictionAlertController.xib in Resources */,
 				8AC944831D0819F900791FC8 /* Localizable.strings in Resources */,
 				8AC944011D056D2200791FC8 /* LaunchScreen.storyboard in Resources */,
 				8AC944001D056D2200791FC8 /* Assets.xcassets in Resources */,
+				B0BD12FC1D0F1A6D008D803D /* FFPredictionAlertViewController.xib in Resources */,
 				8AC944861D081A0D00791FC8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,17 +430,19 @@
 				8AC943FE1D056D2200791FC8 /* AppDelegate.swift in Sources */,
 				8AC945251D0AAC9E00791FC8 /* FFMatch.swift in Sources */,
 				8AC944441D06AC8100791FC8 /* FootFight.xcdatamodeld in Sources */,
+				B0BD12FA1D0F1A6D008D803D /* FFPredictionAlertView.swift in Sources */,
+				B0BD12E91D0F16C3008D803D /* FFObservableObject.swift in Sources */,
 				8AC944171D05725200791FC8 /* FFMatchesContext.swift in Sources */,
 				8AC9440B1D056E3D00791FC8 /* FFViewController.swift in Sources */,
-				8AC9441C1D05950D00791FC8 /* FFObservableObject.swift in Sources */,
+				B0BD12F31D0F19C8008D803D /* GNKAlertViewController.swift in Sources */,
 				8AC9443E1D05BA9D00791FC8 /* FFMatchCell.swift in Sources */,
 				8AC944231D05980A00791FC8 /* FFMatchesView.swift in Sources */,
 				8AC9448C1D081A5100791FC8 /* FFUIConstants.swift in Sources */,
 				8AC944071D056DA200791FC8 /* FFConstants.swift in Sources */,
 				8AC945241D0AAC9E00791FC8 /* FFMatch+CoreDataProperties.swift in Sources */,
+				B0BD12FB1D0F1A6D008D803D /* FFPredictionAlertViewController.swift in Sources */,
 				8AC944121D056F0500791FC8 /* FFContext.swift in Sources */,
-				B0A7D7471D0DC8F500DC2BF9 /* FFPredictionAlert.swift in Sources */,
-				B0A7D7431D0DC81600DC2BF9 /* FFPredictionAlertController.swift in Sources */,
+				B0BD12F51D0F19DD008D803D /* GNKAlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -124,6 +124,14 @@ class FFMatchesViewController: FFViewController,
 
         matchCell.fillWithModel(model)
         
+        // weakify
+        matchCell.predictionButtonHandler = {() -> Void in
+            //strongify
+            FFPredictionAlertViewController.showPredictionAlertOnController(self, with: model, submitButtonActionHandler: {() -> Void in
+                
+            })
+        }
+        
         return matchCell
     }
     
@@ -226,9 +234,5 @@ class FFMatchesViewController: FFViewController,
         let user = FFUser.MR_findFirstOrCreateByAttribute(kFFUserIDKey, withValue: kFFUserID) as FFUser
         
         self.fillWithModel(user)
-    }
-    
-    func showPopup() -> () {
-        let alertController = UIAlertController(nibName: <#T##String?#>, bundle: <#T##NSBundle?#>)
     }
 }
