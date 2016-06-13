@@ -21,7 +21,7 @@ extension FFMatch {
     @NSManaged var homeTeamName: String?
     @NSManaged var matchday: NSNumber?
     @NSManaged var matchID: String?
-    @NSManaged var homeTeamGoalsPrediction: NSNumber?
-    @NSManaged var awayTeamGoalsPrediction: NSNumber?
+    @NSManaged var homeTeamGoalsPrediction: NSNumber!
+    @NSManaged var awayTeamGoalsPrediction: NSNumber!
 
 }

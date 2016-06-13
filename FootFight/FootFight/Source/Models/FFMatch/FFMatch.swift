@@ -9,8 +9,13 @@
 import Foundation
 import CoreData
 
-enum FFPredictionResult: UInt {
-    case FFPredictionResultNone = 0
+enum FFPredictionStatus: UInt {
+    case FFPredictionNotMade = 0
+    case FFPredictionMade
+}
+
+enum FFPredictionResult: Int {
+    case FFPredictionResultNone = -1
     case FFPredictionScoreCorrect
     case FFPredictionResultCorrect
     case FFPredictionWrong
@@ -66,7 +71,7 @@ class FFMatch: NSManagedObject {
     }
     
     var userScoreString: NSString {
-        if FFMatchStatus.FFMatchNotStarted == self.matchStatus {
+        if FFPredictionStatus.FFPredictionNotMade == self.predictionStatus {
             return "-"
         }
         
@@ -97,8 +102,19 @@ class FFMatch: NSManagedObject {
         return self.matchResultWithHomeTeamGoals(homeTeamGoalsPrediction, awayTeamGoals: awayTeamGoalsPrediction)
     }
     
+    var predictionStatus: FFPredictionStatus {
+        if -1 == self.homeTeamGoalsPrediction || -1 == self.awayTeamGoalsPrediction {
+            return FFPredictionStatus.FFPredictionNotMade
+        }
+        
+        return FFPredictionStatus.FFPredictionMade
+    }
+    
     var predictionResult: FFPredictionResult {
-        if FFMatchStatus.FFMatchNotStarted == self.matchStatus {
+        if FFMatchStatus.FFMatchNotStarted == self.matchStatus
+            || -1 == self.homeTeamGoalsPrediction
+            || -1 == self.awayTeamGoalsPrediction
+        {
             return FFPredictionResult.FFPredictionResultNone
         } else if (self.homeTeamGoalsPrediction == self.homeTeamGoals && self.awayTeamGoalsPrediction == self.awayTeamGoals) {
             return FFPredictionResult.FFPredictionScoreCorrect

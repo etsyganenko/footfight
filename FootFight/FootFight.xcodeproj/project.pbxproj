@@ -27,6 +27,9 @@
 		8AC945211D09B67000791FC8 /* FFUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9451F1D09B67000791FC8 /* FFUser.swift */; };
 		8AC945241D0AAC9E00791FC8 /* FFMatch+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC945221D0AAC9E00791FC8 /* FFMatch+CoreDataProperties.swift */; };
 		8AC945251D0AAC9E00791FC8 /* FFMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC945231D0AAC9E00791FC8 /* FFMatch.swift */; };
+		B0A7D7431D0DC81600DC2BF9 /* FFPredictionAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7D7411D0DC81600DC2BF9 /* FFPredictionAlertController.swift */; };
+		B0A7D7441D0DC81600DC2BF9 /* FFPredictionAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A7D7421D0DC81600DC2BF9 /* FFPredictionAlertController.xib */; };
+		B0A7D7471D0DC8F500DC2BF9 /* FFPredictionAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7D7461D0DC8F500DC2BF9 /* FFPredictionAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,9 @@
 		8AC9451F1D09B67000791FC8 /* FFUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFUser.swift; sourceTree = "<group>"; };
 		8AC945221D0AAC9E00791FC8 /* FFMatch+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FFMatch+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8AC945231D0AAC9E00791FC8 /* FFMatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFMatch.swift; sourceTree = "<group>"; };
+		B0A7D7411D0DC81600DC2BF9 /* FFPredictionAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFPredictionAlertController.swift; sourceTree = "<group>"; };
+		B0A7D7421D0DC81600DC2BF9 /* FFPredictionAlertController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFPredictionAlertController.xib; sourceTree = "<group>"; };
+		B0A7D7461D0DC8F500DC2BF9 /* FFPredictionAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFPredictionAlert.swift; sourceTree = "<group>"; };
 		E542C81D1406C214088C5B37 /* Pods-FootFight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootFight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FootFight/Pods-FootFight.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +194,7 @@
 			children = (
 				8AC944091D056E3D00791FC8 /* FFViewController */,
 				8AC9441D1D05979800791FC8 /* FFMatchesViewController */,
+				B0A7D7451D0DC8B600DC2BF9 /* FFPredictionAlert */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -230,6 +237,8 @@
 				8AC944201D0597F100791FC8 /* FFMatchesViewController.swift */,
 				8AC944221D05980A00791FC8 /* FFMatchesView.swift */,
 				8AC9443D1D05BA9D00791FC8 /* FFMatchCell.swift */,
+				B0A7D7411D0DC81600DC2BF9 /* FFPredictionAlertController.swift */,
+				B0A7D7421D0DC81600DC2BF9 /* FFPredictionAlertController.xib */,
 			);
 			path = FFMatchesViewController;
 			sourceTree = "<group>";
@@ -250,6 +259,14 @@
 				8AC9451F1D09B67000791FC8 /* FFUser.swift */,
 			);
 			path = FFUser;
+			sourceTree = "<group>";
+		};
+		B0A7D7451D0DC8B600DC2BF9 /* FFPredictionAlert */ = {
+			isa = PBXGroup;
+			children = (
+				B0A7D7461D0DC8F500DC2BF9 /* FFPredictionAlert.swift */,
+			);
+			path = FFPredictionAlert;
 			sourceTree = "<group>";
 		};
 		DB8A9AF7BC2015321E6BB061 /* Frameworks */ = {
@@ -322,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0A7D7441D0DC81600DC2BF9 /* FFPredictionAlertController.xib in Resources */,
 				8AC944831D0819F900791FC8 /* Localizable.strings in Resources */,
 				8AC944011D056D2200791FC8 /* LaunchScreen.storyboard in Resources */,
 				8AC944001D056D2200791FC8 /* Assets.xcassets in Resources */,
@@ -399,6 +417,8 @@
 				8AC944071D056DA200791FC8 /* FFConstants.swift in Sources */,
 				8AC945241D0AAC9E00791FC8 /* FFMatch+CoreDataProperties.swift in Sources */,
 				8AC944121D056F0500791FC8 /* FFContext.swift in Sources */,
+				B0A7D7471D0DC8F500DC2BF9 /* FFPredictionAlert.swift in Sources */,
+				B0A7D7431D0DC81600DC2BF9 /* FFPredictionAlertController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

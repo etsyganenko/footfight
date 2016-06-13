@@ -129,6 +129,12 @@ class FFMatchesViewController: FFViewController,
     
     // MARK: - UITableViewDelegate
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        tableView.estimatedRowHeight = 50.0
+        
+        return UITableViewAutomaticDimension
+    }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
     }
@@ -220,5 +226,9 @@ class FFMatchesViewController: FFViewController,
         let user = FFUser.MR_findFirstOrCreateByAttribute(kFFUserIDKey, withValue: kFFUserID) as FFUser
         
         self.fillWithModel(user)
+    }
+    
+    func showPopup() -> () {
+        let alertController = UIAlertController(nibName: <#T##String?#>, bundle: <#T##NSBundle?#>)
     }
 }
