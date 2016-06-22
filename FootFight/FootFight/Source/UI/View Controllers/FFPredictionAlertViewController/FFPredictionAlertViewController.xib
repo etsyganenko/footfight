@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FFPredictionAlertViewController" customModule="FootFight" customModuleProvider="target">
@@ -16,60 +18,60 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i2Q-8N-5dV">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.015767289325594902" green="0.57160466909408569" blue="0.83119708299636841" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eks-Pe-yL2">
+                    <rect key="frame" x="62" y="209" width="250" height="250"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eks-Pe-yL2">
-                            <rect key="frame" x="62" y="219" width="250" height="229"/>
-                            <subviews>
-                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e2w-tr-qdu">
-                                    <rect key="frame" x="8" y="8" width="234" height="175"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="175" id="P5N-r5-K9P"/>
-                                    </constraints>
-                                    <connections>
-                                        <outlet property="dataSource" destination="-1" id="i67-Rh-aLK"/>
-                                        <outlet property="delegate" destination="-1" id="N6X-0R-WgW"/>
-                                    </connections>
-                                </pickerView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zer-Bt-zoa">
-                                    <rect key="frame" x="102" y="191" width="46" height="30"/>
-                                    <state key="normal" title="Button"/>
-                                    <connections>
-                                        <action selector="onSubmit:" destination="-1" eventType="touchUpInside" id="FqP-gi-dv8"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e2w-tr-qdu">
+                            <rect key="frame" x="63" y="63" width="125" height="125"/>
+                            <color key="backgroundColor" red="0.0078431372550000003" green="0.52941176469999995" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="e2w-tr-qdu" secondAttribute="trailing" constant="8" id="5HI-uC-dU3"/>
-                                <constraint firstAttribute="width" constant="250" id="IZK-7O-tpe"/>
-                                <constraint firstItem="e2w-tr-qdu" firstAttribute="top" secondItem="Eks-Pe-yL2" secondAttribute="top" constant="8" id="TLb-mT-xkY"/>
-                                <constraint firstItem="Zer-Bt-zoa" firstAttribute="centerX" secondItem="Eks-Pe-yL2" secondAttribute="centerX" id="ciu-DT-EYy"/>
-                                <constraint firstItem="Zer-Bt-zoa" firstAttribute="top" secondItem="e2w-tr-qdu" secondAttribute="bottom" constant="8" id="is0-Da-jGc"/>
-                                <constraint firstAttribute="bottom" secondItem="Zer-Bt-zoa" secondAttribute="bottom" constant="8" id="joO-dr-YXW"/>
-                                <constraint firstItem="e2w-tr-qdu" firstAttribute="leading" secondItem="Eks-Pe-yL2" secondAttribute="leading" constant="8" id="pDN-pR-EJb"/>
+                                <constraint firstAttribute="width" secondItem="e2w-tr-qdu" secondAttribute="height" multiplier="1:1" id="Jh5-VE-1xQ"/>
                             </constraints>
-                        </view>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="i67-Rh-aLK"/>
+                                <outlet property="delegate" destination="-1" id="N6X-0R-WgW"/>
+                            </connections>
+                        </pickerView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zer-Bt-zoa">
+                            <rect key="frame" x="100" y="213" width="51" height="32"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <state key="normal" title="Button">
+                                <color key="titleColor" red="0.0078431372549019607" green="0.52941176470588236" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="onSubmit:" destination="-1" eventType="touchUpInside" id="FqP-gi-dv8"/>
+                            </connections>
+                        </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="0.75049867021276595" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="Eks-Pe-yL2" firstAttribute="centerX" secondItem="i2Q-8N-5dV" secondAttribute="centerX" id="Iyz-KV-VU6"/>
-                        <constraint firstItem="Eks-Pe-yL2" firstAttribute="centerY" secondItem="i2Q-8N-5dV" secondAttribute="centerY" id="khw-09-hLc"/>
+                        <constraint firstAttribute="bottom" secondItem="Zer-Bt-zoa" secondAttribute="bottom" constant="5" id="BgA-Xp-UnJ"/>
+                        <constraint firstAttribute="width" constant="250" id="CwU-3F-QUd"/>
+                        <constraint firstItem="Zer-Bt-zoa" firstAttribute="centerX" secondItem="Eks-Pe-yL2" secondAttribute="centerX" id="Eb2-cu-ooe"/>
+                        <constraint firstAttribute="width" secondItem="Eks-Pe-yL2" secondAttribute="height" multiplier="1:1" id="Eyz-6p-B1M"/>
+                        <constraint firstItem="e2w-tr-qdu" firstAttribute="centerY" secondItem="Eks-Pe-yL2" secondAttribute="centerY" id="H07-xL-ydc"/>
+                        <constraint firstItem="e2w-tr-qdu" firstAttribute="width" secondItem="Eks-Pe-yL2" secondAttribute="width" multiplier="1:2" id="LRW-Da-GVZ"/>
+                        <constraint firstItem="e2w-tr-qdu" firstAttribute="centerX" secondItem="Eks-Pe-yL2" secondAttribute="centerX" id="S9m-tz-07B"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="i2Q-8N-5dV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="DrN-GP-8S1"/>
+                <constraint firstItem="Eks-Pe-yL2" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="KUt-0M-m9I"/>
                 <constraint firstAttribute="trailing" secondItem="i2Q-8N-5dV" secondAttribute="trailing" id="LPJ-8H-gZR"/>
+                <constraint firstItem="Eks-Pe-yL2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Oko-fT-fH4"/>
                 <constraint firstAttribute="bottom" secondItem="i2Q-8N-5dV" secondAttribute="bottom" id="a0D-18-CS8"/>
                 <constraint firstItem="i2Q-8N-5dV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mCj-kB-SFJ"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <connections>
-                <outlet property="contentView" destination="Eks-Pe-yL2" id="Dv0-Yv-wBf"/>
+                <outlet property="contentView" destination="Eks-Pe-yL2" id="na2-fE-1Fv"/>
                 <outlet property="pickerView" destination="e2w-tr-qdu" id="TJd-AR-RvY"/>
                 <outlet property="submitButton" destination="Zer-Bt-zoa" id="oBX-qb-iYN"/>
-                <outlet property="translucentBackgroundView" destination="i2Q-8N-5dV" id="gKR-mh-hfU"/>
+                <outlet property="translucentBackgroundView" destination="i2Q-8N-5dV" id="MOi-R7-31Q"/>
             </connections>
         </view>
     </objects>
