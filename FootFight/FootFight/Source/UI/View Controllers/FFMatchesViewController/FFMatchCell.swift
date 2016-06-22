@@ -15,6 +15,12 @@ class FFMatchCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.homeTeamGoalsPredictionButton!.layer.borderColor = UIColor.whiteColor().CGColor
+        self.homeTeamGoalsPredictionButton?.layer.borderWidth = 0.5
+        
+        self.awayTeamGoalsPredictionButton!.layer.borderColor = UIColor.whiteColor().CGColor
+        self.awayTeamGoalsPredictionButton?.layer.borderWidth = 0.5
     }
     
     // MARK: - Accessors
@@ -31,17 +37,20 @@ class FFMatchCell: UITableViewCell {
     
     @IBOutlet var homeTeamGoalsPredictionButton: UIButton?
     @IBOutlet var awayTeamGoalsPredictionButton: UIButton?
+    @IBOutlet var predictionButton: UIButton?
+    
+    @IBOutlet var separatorView: UIView?
     
     var predictionButtonHandler: (() -> Void)?
     
     // MARK: - Interface Handling
     
-    @IBAction func onHomeTeamGoalsPrediction(sender: UIButton) {
-        self.showPredictionAlertController()
-    }
-    
-    @IBAction func onAwayTeamGoalsPrediction(sender: UIButton) {
-        self.showPredictionAlertController()
+    @IBAction func onPrediction(sender: UIButton) {
+        let match = FFMatch.MR_findFirstByAttribute(kFFMatchIDKey, withValue: self.matchID!)! as FFMatch
+        
+        if FFMatchStatus.FFMatchStarted != match.matchStatus {
+            self.showPredictionAlertController()
+        }
     }
     
     // MARK: - Public

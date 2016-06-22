@@ -8,22 +8,17 @@
 
 import UIKit
 
-class FFPredictionAlertView: UIView {
+class FFPredictionAlertView: GNKAlertView {
 
     @IBOutlet var pickerView: UIPickerView!
     
     @IBOutlet var submitButton: UIButton!
     
-    @IBOutlet var translucentBackgroundView: UIView?
-    @IBOutlet var contentView: UIView?
-    
     override func awakeFromNib() {
         super.awakeFromNib()
                 
         self.contentView?.layer.cornerRadius = (self.contentView?.frame.width)! / 2
-//        self.contentView?.layer.masksToBounds = true
-//        self.contentView?.layer.setNeedsLayout()
-//        self.contentView?.layer.setNeedsDisplay()
+        self.contentView?.layer.masksToBounds = true
         
         self.submitButton.setTitle(NSLocalizedString(kFFOK, comment: ""), forState: UIControlState.Normal)
     }

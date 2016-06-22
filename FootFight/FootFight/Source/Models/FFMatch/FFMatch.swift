@@ -79,9 +79,9 @@ class FFMatch: NSManagedObject {
     }
     
     var matchTypes: NSArray {
-        return [NSString(format:"%@ - %@ %d", NSLocalizedString(kFFGroupStage, comment: String()), NSLocalizedString(kFFMatchday, comment: String()), self.matchday!.intValue),
-                NSString(format:"%@ - %@ %d", NSLocalizedString(kFFGroupStage, comment: String()), NSLocalizedString(kFFMatchday, comment: String()), self.matchday!.intValue),
-                NSString(format:"%@ - %@ %d", NSLocalizedString(kFFGroupStage, comment: String()), NSLocalizedString(kFFMatchday, comment: String()), self.matchday!.intValue),
+        return [NSString(format:"%@ %d", NSLocalizedString(kFFMatchday, comment: String()), self.matchday!.intValue),
+                NSString(format:"%@ %d", NSLocalizedString(kFFMatchday, comment: String()), self.matchday!.intValue),
+                NSString(format:"%@ %d", NSLocalizedString(kFFMatchday, comment: String()), self.matchday!.intValue),
                 NSLocalizedString(kFF18Final, comment: String()),
                 NSLocalizedString(kFF14Final, comment: String()),
                 NSLocalizedString(kFF12Final, comment: String()),

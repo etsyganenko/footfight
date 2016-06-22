@@ -21,6 +21,7 @@ class GNKAlertViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     var translucentBackgroundViewTapGestureRecognizer: UITapGestureRecognizer?
+    var contentViewTapGestureRecognizer: UITapGestureRecognizer?
     
     
     // MARK: - View Lifecycle
@@ -28,24 +29,30 @@ class GNKAlertViewController: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let translucentBackgroundViewTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(GNKAlertViewController.tapBackgroundView(_:)))
-//        translucentBackgroundViewTapGestureRecognizer.delegate = self
-//        self.translucentBackgroundViewTapGestureRecognizer = translucentBackgroundViewTapGestureRecognizer
+        let translucentBackgroundViewTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(GNKAlertViewController.onTranslucentBackgroundView(_:)))
+        let contentViewTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(GNKAlertViewController.onContentView(_:)))
         
-//        let contentViewTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(GNKAlertViewController.tapContentView(_:)))
-//        contentViewTapGestureRecognizer.delegate = self
-//        contentViewTapGestureRecognizer.enabled = true
-//        self.contentViewTapGestureRecognizer = contentViewTapGestureRecognizer
+        translucentBackgroundViewTapGestureRecognizer.delegate = self
+        contentViewTapGestureRecognizer.delegate = self
         
-//        self.mainView?.translucentBackgroundView?.addGestureRecognizer(translucentBackgroundViewTapGestureRecognizer)
-//        self.mainView?.contentView?.addGestureRecognizer(contentViewTapGestureRecognizer)
+        self.translucentBackgroundViewTapGestureRecognizer = translucentBackgroundViewTapGestureRecognizer
+        self.contentViewTapGestureRecognizer = contentViewTapGestureRecognizer
+        
+        self.mainView?.translucentBackgroundView?.addGestureRecognizer(translucentBackgroundViewTapGestureRecognizer)
+        self.mainView?.contentView?.addGestureRecognizer(contentViewTapGestureRecognizer)
+    }
+    
+    // MARK: - Interface Handling
+    
+    @IBAction func onTranslucentBackgroundView(sender: UITapGestureRecognizer) {
+        self.hide()
+    }
+    
+    @IBAction func onContentView(sender: UITapGestureRecognizer) {
+        self.hide()
     }
     
     // MARK: - Public
-    
-    @IBAction func tapBackgroundView(sender: UITapGestureRecognizer) -> () {
-        self.hide()
-    }
     
     func hide() -> () {
         self.dismissViewControllerAnimated(true, completion: nil)

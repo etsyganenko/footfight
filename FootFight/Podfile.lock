@@ -1,17 +1,20 @@
 PODS:
-  - Alamofire (3.4.0)
+  - Alamofire (3.4.1)
+  - ICSPullToRefresh (0.4)
   - MagicalRecord (2.3.2):
     - MagicalRecord/Core (= 2.3.2)
   - MagicalRecord/Core (2.3.2)
 
 DEPENDENCIES:
   - Alamofire
+  - ICSPullToRefresh
   - MagicalRecord
 
 SPEC CHECKSUMS:
-  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  ICSPullToRefresh: 9e6720df41f6d3e8a31e3cdd99a0b922850abe85
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
 
-PODFILE CHECKSUM: 3bae183767ab8b23bf5f8c27229e537d280d73f8
+PODFILE CHECKSUM: 4afd58b4c2f6842b4f6f129104de27fe33dadde9
 
 COCOAPODS: 1.0.0

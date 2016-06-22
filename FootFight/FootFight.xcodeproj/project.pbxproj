@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6909BD65DE0FEBE8C85F6B12 /* Pods_FootFight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A3737004B2C6E14F1DD408 /* Pods_FootFight.framework */; };
+		8A3458B21D1A80190068B627 /* FFMatchesSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3458B11D1A80190068B627 /* FFMatchesSectionHeader.swift */; };
+		8A3458B41D1A80390068B627 /* FFMatchesSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A3458B31D1A80390068B627 /* FFMatchesSectionHeader.xib */; };
+		8A3458B71D1AB0F00068B627 /* FFTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3458B61D1AB0F00068B627 /* FFTableViewController.swift */; };
+		8A3458BB1D1AB23C0068B627 /* FFPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3458B91D1AB23C0068B627 /* FFPageViewController.swift */; };
+		8A3458BC1D1AB23C0068B627 /* FFPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A3458BA1D1AB23C0068B627 /* FFPageViewController.xib */; };
 		8A4EDDAB1D193917007373DE /* GNKCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4EDDAA1D193917007373DE /* GNKCircleView.swift */; };
 		8AC943FE1D056D2200791FC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC943EF1D056D2200791FC8 /* AppDelegate.swift */; };
 		8AC944001D056D2200791FC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AC943F21D056D2200791FC8 /* Assets.xcassets */; };
@@ -38,6 +43,11 @@
 /* Begin PBXFileReference section */
 		21A3737004B2C6E14F1DD408 /* Pods_FootFight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootFight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5163C1C05043A4A75485CDCA /* Pods-FootFight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootFight.release.xcconfig"; path = "Pods/Target Support Files/Pods-FootFight/Pods-FootFight.release.xcconfig"; sourceTree = "<group>"; };
+		8A3458B11D1A80190068B627 /* FFMatchesSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFMatchesSectionHeader.swift; sourceTree = "<group>"; };
+		8A3458B31D1A80390068B627 /* FFMatchesSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFMatchesSectionHeader.xib; sourceTree = "<group>"; };
+		8A3458B61D1AB0F00068B627 /* FFTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFTableViewController.swift; sourceTree = "<group>"; };
+		8A3458B91D1AB23C0068B627 /* FFPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFPageViewController.swift; sourceTree = "<group>"; };
+		8A3458BA1D1AB23C0068B627 /* FFPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFPageViewController.xib; sourceTree = "<group>"; };
 		8A4EDDAA1D193917007373DE /* GNKCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GNKCircleView.swift; sourceTree = "<group>"; };
 		8AC943C71D0568E900791FC8 /* FootFight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootFight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC943EF1D056D2200791FC8 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +99,23 @@
 				5163C1C05043A4A75485CDCA /* Pods-FootFight.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8A3458B51D1AB0B50068B627 /* FFTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8A3458B61D1AB0F00068B627 /* FFTableViewController.swift */,
+			);
+			path = FFTableViewController;
+			sourceTree = "<group>";
+		};
+		8A3458B81D1AB20E0068B627 /* FFPageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8A3458B91D1AB23C0068B627 /* FFPageViewController.swift */,
+				8A3458BA1D1AB23C0068B627 /* FFPageViewController.xib */,
+			);
+			path = FFPageViewController;
 			sourceTree = "<group>";
 		};
 		8A4EDDA91D193900007373DE /* GNKCircleView */ = {
@@ -207,6 +234,8 @@
 			isa = PBXGroup;
 			children = (
 				8AC944091D056E3D00791FC8 /* FFViewController */,
+				8A3458B81D1AB20E0068B627 /* FFPageViewController */,
+				8A3458B51D1AB0B50068B627 /* FFTableViewController */,
 				8AC9441D1D05979800791FC8 /* FFMatchesViewController */,
 				B0BD12F61D0F1A6D008D803D /* FFPredictionAlertViewController */,
 			);
@@ -243,6 +272,8 @@
 				8AC944201D0597F100791FC8 /* FFMatchesViewController.swift */,
 				8AC944221D05980A00791FC8 /* FFMatchesView.swift */,
 				8AC9443D1D05BA9D00791FC8 /* FFMatchCell.swift */,
+				8A3458B11D1A80190068B627 /* FFMatchesSectionHeader.swift */,
+				8A3458B31D1A80390068B627 /* FFMatchesSectionHeader.xib */,
 			);
 			path = FFMatchesViewController;
 			sourceTree = "<group>";
@@ -374,6 +405,8 @@
 			files = (
 				8AC944831D0819F900791FC8 /* Localizable.strings in Resources */,
 				8AC944011D056D2200791FC8 /* LaunchScreen.storyboard in Resources */,
+				8A3458B41D1A80390068B627 /* FFMatchesSectionHeader.xib in Resources */,
+				8A3458BC1D1AB23C0068B627 /* FFPageViewController.xib in Resources */,
 				8AC944001D056D2200791FC8 /* Assets.xcassets in Resources */,
 				B0BD12FC1D0F1A6D008D803D /* FFPredictionAlertViewController.xib in Resources */,
 				8AC944861D081A0D00791FC8 /* Main.storyboard in Resources */,
@@ -442,12 +475,15 @@
 				8AC945251D0AAC9E00791FC8 /* FFMatch.swift in Sources */,
 				8AC944441D06AC8100791FC8 /* FootFight.xcdatamodeld in Sources */,
 				B0BD12FA1D0F1A6D008D803D /* FFPredictionAlertView.swift in Sources */,
+				8A3458B71D1AB0F00068B627 /* FFTableViewController.swift in Sources */,
 				B0BD12E91D0F16C3008D803D /* FFObservableObject.swift in Sources */,
 				8AC944171D05725200791FC8 /* FFMatchesContext.swift in Sources */,
 				8AC9440B1D056E3D00791FC8 /* FFViewController.swift in Sources */,
+				8A3458B21D1A80190068B627 /* FFMatchesSectionHeader.swift in Sources */,
 				B0BD12F31D0F19C8008D803D /* GNKAlertViewController.swift in Sources */,
 				8AC9443E1D05BA9D00791FC8 /* FFMatchCell.swift in Sources */,
 				8AC944231D05980A00791FC8 /* FFMatchesView.swift in Sources */,
+				8A3458BB1D1AB23C0068B627 /* FFPageViewController.swift in Sources */,
 				8AC9448C1D081A5100791FC8 /* FFUIConstants.swift in Sources */,
 				8AC944071D056DA200791FC8 /* FFConstants.swift in Sources */,
 				8AC945241D0AAC9E00791FC8 /* FFMatch+CoreDataProperties.swift in Sources */,

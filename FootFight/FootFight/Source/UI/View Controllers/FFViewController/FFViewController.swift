@@ -56,4 +56,8 @@ class FFViewController : UIViewController {
 //        self.navigationController?.navigationBarHidden = true
     }
     
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
+    
 }

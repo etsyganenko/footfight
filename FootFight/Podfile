@@ -5,4 +5,5 @@ use_frameworks!
 target 'FootFight' do
     pod 'Alamofire'
     pod 'MagicalRecord'
+    pod 'ICSPullToRefresh'
 end

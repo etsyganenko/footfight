@@ -15,15 +15,14 @@ enum FFScorePredictionComponents: Int {
     case count
 }
 
-class FFPredictionAlertViewController: UIViewController,
+class FFPredictionAlertViewController: GNKAlertViewController,
                                         UIPickerViewDataSource,
-                                        UIPickerViewDelegate,
-                                        UIGestureRecognizerDelegate
+                                        UIPickerViewDelegate
 {
 
     // MARK: - Accessors
     
-    var mainView: FFPredictionAlertView? {
+    override var mainView: FFPredictionAlertView? {
         guard let view = self.view else {
             return nil
         }
@@ -34,8 +33,6 @@ class FFPredictionAlertViewController: UIViewController,
     var matchID: String?
     
     let predictionOptions = Array(0...9)
-    
-    var alertTapGestureRecognizer: UITapGestureRecognizer?
     
     // MARK: - Class Methods
     
@@ -53,30 +50,6 @@ class FFPredictionAlertViewController: UIViewController,
         controller.presentViewController(alertController, animated: true, completion: nil)
     }
     
-    // MARK: - View Lifecycle
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        let alertTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hide))
-        alertTapGestureRecognizer.delegate = self
-        
-        self.alertTapGestureRecognizer = alertTapGestureRecognizer
-        
-        self.mainView?.contentView?.addGestureRecognizer(alertTapGestureRecognizer)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-//        let alertTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(FFPredictionAlertViewController.onAlert(_:)))
-//        alertTapGestureRecognizer.delegate = self
-//        
-//        self.alertTapGestureRecognizer = alertTapGestureRecognizer
-//        
-//        self.mainView?.contentView?.addGestureRecognizer(alertTapGestureRecognizer)
-    }
-    
     // MARK: - Interface Handling
     
     @IBAction func onSubmit(sender: UIButton) {
@@ -90,18 +63,10 @@ class FFPredictionAlertViewController: UIViewController,
         self.hide()
     }
     
-    @IBAction func onAlert(sender: UITapGestureRecognizer) {
-        self.hide()
-    }
-    
     // MARK: - Public
     
     func fillWithModel(model: FFMatch) -> () {
         self.matchID = model.matchID
-    }
-    
-    func hide() -> () {
-        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     // MARK: - UIPickerViewDataSource
@@ -114,17 +79,31 @@ class FFPredictionAlertViewController: UIViewController,
         return self.predictionOptions.count
     }
     
-    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+    // MARK: - UIPickerViewDelegate
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         let title = String(self.predictionOptions[row])
-        let paragraphStyle = NSMutableParagraphStyle()
         
-        paragraphStyle.alignment = NSTextAlignment.Center
-        paragraphStyle.baseWritingDirection = NSWritingDirection.Natural
-        
-        return NSAttributedString(string: title, attributes: [NSParagraphStyleAttributeName : paragraphStyle])
+        return title
     }
     
+//    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+//        let title = String(self.predictionOptions[row])
+//        let paragraphStyle = NSMutableParagraphStyle()
+//        
+//        paragraphStyle.alignment = NSTextAlignment.Center
+////        paragraphStyle.baseWritingDirection = NSWritingDirection.Natural
+//        
+//        return NSAttributedString(string: title, attributes: [NSParagraphStyleAttributeName : paragraphStyle])
+//    }
+    
+    // MARK: - UIGestureRecognizerDelegate
+    
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
+        if self.translucentBackgroundViewTapGestureRecognizer == gestureRecognizer {
+            return true
+        }
+        
         guard let alertView = self.mainView?.contentView as UIView! else {
             return false
         }
@@ -143,13 +122,6 @@ class FFPredictionAlertViewController: UIViewController,
         let distance = sqrt((distanceX * distanceX) + (distanceY * distanceY))
         let radius = alertView.bounds.width / 2
         
-        if distance > radius {
-            return true
-        }
-        
-        return false
-        
-//        return distance > radius
+        return distance > radius
     }
-
 }

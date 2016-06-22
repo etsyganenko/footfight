@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import ICSPullToRefresh
 
 class FFMatchesViewController: FFViewController,
                                 NSFetchedResultsControllerDelegate,
@@ -28,7 +29,10 @@ class FFMatchesViewController: FFViewController,
     lazy var fetchedResultsController: NSFetchedResultsController = {
         let fetchRequest = NSFetchRequest(entityName: kFFMatchEntityName)
 
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: kFFMatchDateKey, ascending: true)]
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: kFFMatchDateKey, ascending: true),
+                                        NSSortDescriptor(key: kFFMatchIDKey, ascending: true)]
+//                                        NSSortDescriptor(key: kFFHomeTeamNameKey, ascending: true),
+//                                        NSSortDescriptor(key: kFFAwayTeamNameKey, ascending: true)]
         
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
                                                                   managedObjectContext: NSManagedObjectContext.MR_defaultContext(),
@@ -51,7 +55,8 @@ class FFMatchesViewController: FFViewController,
     override var contextDidLoadHandler: FFNotificationHandler! {
         get {
             return {
-                
+                self.mainView!.tableView.pullToRefreshView?.stopAnimating()
+                self.mainView!.tableView.infiniteScrollingView?.stopAnimating()
             }
         }
         set(newValue) {}
@@ -80,6 +85,24 @@ class FFMatchesViewController: FFViewController,
         self.context = FFMatchesContext()
         
         self.updateTotalScore()
+        
+        guard let tableView = self.mainView?.tableView else {
+            return
+        }
+        
+        tableView.addPullToRefreshHandler({ () -> () in
+            let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
+            dispatch_after(delayTime, dispatch_get_main_queue()) {
+                self.context = FFMatchesContext()
+            }
+        })
+        
+        tableView.addInfiniteScrollingWithHandler({ () -> () in
+            let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
+            dispatch_after(delayTime, dispatch_get_main_queue()) {
+                self.context = FFMatchesContext()
+            }
+        })
     }
     
     // MARK: - User Interaction
@@ -94,17 +117,6 @@ class FFMatchesViewController: FFViewController,
         }
         
         return 0;
-    }
-    
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        guard let sectionInfo = self.fetchedResultsController.sections?[section] else {
-            return nil
-        }
-        
-        let model = sectionInfo.objects?.first as! FFMatch        
-        let title = model.matchType as String
-        
-        return title
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -123,6 +135,7 @@ class FFMatchesViewController: FFViewController,
         let model = section.objects![indexPath.row] as! FFMatch
 
         matchCell.fillWithModel(model)
+        matchCell.separatorView?.hidden = indexPath.row == section.numberOfObjects - 1
         
         // weakify
         matchCell.predictionButtonHandler = {() -> Void in
@@ -137,10 +150,26 @@ class FFMatchesViewController: FFViewController,
     
     // MARK: - UITableViewDelegate
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        tableView.estimatedRowHeight = 50.0
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let sectionInfo = self.fetchedResultsController.sections?[section] else {
+            return nil
+        }
         
-        return UITableViewAutomaticDimension
+        let model = sectionInfo.objects?.first as! FFMatch
+        let title = model.matchType as String
+        
+        let view = NSBundle.mainBundle().loadNibNamed("FFMatchesSectionHeader", owner: nil, options: nil).first as? FFMatchesSectionHeader
+        
+        view?.titleLabel?.text = title
+        
+        return view
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+//        tableView.estimatedRowHeight = 50.0
+//        
+//        return UITableViewAutomaticDimension
+        return 120.0
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
