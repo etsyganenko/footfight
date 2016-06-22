@@ -6,4 +6,9 @@ target 'FootFight' do
     pod 'Alamofire'
     pod 'MagicalRecord'
     pod 'ICSPullToRefresh'
+    
+    pod 'RxSwift'
+    pod 'RxCocoa'
+    pod 'RxBlocking'
+    pod 'RxTests'
 end

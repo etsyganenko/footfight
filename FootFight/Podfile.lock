@@ -4,17 +4,32 @@ PODS:
   - MagicalRecord (2.3.2):
     - MagicalRecord/Core (= 2.3.2)
   - MagicalRecord/Core (2.3.2)
+  - RxBlocking (2.5.0):
+    - RxSwift (~> 2.5)
+  - RxCocoa (2.5.0):
+    - RxSwift (~> 2.5)
+  - RxSwift (2.5.0)
+  - RxTests (2.5.0):
+    - RxSwift (~> 2.5)
 
 DEPENDENCIES:
   - Alamofire
   - ICSPullToRefresh
   - MagicalRecord
+  - RxBlocking
+  - RxCocoa
+  - RxSwift
+  - RxTests
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   ICSPullToRefresh: 9e6720df41f6d3e8a31e3cdd99a0b922850abe85
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+  RxBlocking: 595d9ab56dde6b00beaa5aba40e95b150d2135f1
+  RxCocoa: e1b1562e57a554d0fb2aabf9d71b637f177257c7
+  RxSwift: 402b41a50e922a0368fc14cb3bc9f4427920e8ae
+  RxTests: 1b13bea0a138552b52aeead549ef08d578bcda9e
 
-PODFILE CHECKSUM: 4afd58b4c2f6842b4f6f129104de27fe33dadde9
+PODFILE CHECKSUM: aa9698a06042dbc7fc8f25e363575c46b26e1216
 
 COCOAPODS: 1.0.0
