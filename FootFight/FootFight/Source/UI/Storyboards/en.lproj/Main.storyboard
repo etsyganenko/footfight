@@ -68,7 +68,7 @@
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                             <state key="normal">
-                                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <color key="titleColor" red="0.031372549020000001" green="0.65490196079999996" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
                                                             <connections>
                                                                 <action selector="onHomeTeamGoalsPrediction:" destination="0mk-Qc-Adz" eventType="touchUpInside" id="SjB-48-N9I"/>
@@ -78,7 +78,7 @@
                                                             <rect key="frame" x="70" y="0.0" width="50" height="50"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                             <state key="normal">
-                                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <color key="titleColor" red="0.031372549020000001" green="0.65490196079999996" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
                                                             <connections>
                                                                 <action selector="onAwayTeamGoalsPrediction:" destination="0mk-Qc-Adz" eventType="touchUpInside" id="2ut-Yi-GhD"/>
