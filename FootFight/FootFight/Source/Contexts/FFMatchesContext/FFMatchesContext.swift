@@ -16,8 +16,8 @@ class FFMatchesContext: FFContext {
 
     // MARK: - Initialization
     
-    override init() {
-        super.init()
+    override init(model: AnyObject?) {
+        super.init(model: model)
         
         self.path = kFFMatchesPath
         self.url = kFFHost.stringByAppendingString(self.path!)
@@ -47,21 +47,26 @@ class FFMatchesContext: FFContext {
                     
                     let matchDate = dateFormatter.dateFromString(matchDateString)! as NSDate
                     
-                    guard let matchday = matchDictionary[kFFMatchdayKey] as? NSNumber else {
+                    guard let stageIndex = matchDictionary[kFFMatchdayKey] as? NSNumber else {
                         return
                     }
                     
-                    let matchID = String(matchday).stringByAppendingString(homeTeamName).stringByAppendingString(awayTeamName)
+                    let matchID = String(stageIndex).stringByAppendingString(homeTeamName).stringByAppendingString(awayTeamName)
                     
                     NSManagedObjectContext.MR_defaultContext().MR_saveWithBlockAndWait({ (localContext : NSManagedObjectContext!) in
+                        let championship = self.model as? FFChampionship
+                        let stage = FFStage.MR_findFirstOrCreateByAttribute(kFFStageIDKey, withValue: stageIndex, inContext: localContext)
                         let match = FFMatch.MR_findFirstOrCreateByAttribute(kFFMatchIDKey, withValue: matchID, inContext: localContext)
                         
+                        stage.stageIndex = stageIndex
+                        stage.championship = championship
+
                         match.homeTeamName = homeTeamName
                         match.awayTeamName = awayTeamName
-                        match.matchday = matchday
                         match.matchDate = matchDate
+                        match.stage = stage
                         
-                        if let resultDictionary = matchDictionary["result"] as? NSDictionary {
+                        if let resultDictionary = matchDictionary[kFFMatchResultKey] as? NSDictionary {
                             if let homeTeamGoals = resultDictionary[kFFGoalsHomeTeamKey] as? NSNumber {
                                 match.homeTeamGoals = homeTeamGoals
                             }
@@ -70,6 +75,8 @@ class FFMatchesContext: FFContext {
                                 match.awayTeamGoals = awayTeamGoals
                             }
                         }
+                        
+
                     })
                 }
             }

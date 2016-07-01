@@ -18,12 +18,6 @@ class FFMatchCell: UITableViewCell {
         
         self.homeTeamGoalsPredictionButton?.backgroundColor = UIColor.whiteColor()
         self.awayTeamGoalsPredictionButton?.backgroundColor = UIColor.whiteColor()
-        
-//        self.homeTeamGoalsPredictionButton!.layer.borderColor = UIColor.whiteColor().CGColor
-//        self.homeTeamGoalsPredictionButton?.layer.borderWidth = 0.5
-//        
-//        self.awayTeamGoalsPredictionButton!.layer.borderColor = UIColor.whiteColor().CGColor
-//        self.awayTeamGoalsPredictionButton?.layer.borderWidth = 0.5
     }
     
     // MARK: - Accessors

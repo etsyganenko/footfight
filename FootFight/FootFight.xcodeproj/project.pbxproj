@@ -8,11 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		6909BD65DE0FEBE8C85F6B12 /* Pods_FootFight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A3737004B2C6E14F1DD408 /* Pods_FootFight.framework */; };
-		8A3458B21D1A80190068B627 /* FFMatchesSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3458B11D1A80190068B627 /* FFMatchesSectionHeader.swift */; };
-		8A3458B41D1A80390068B627 /* FFMatchesSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A3458B31D1A80390068B627 /* FFMatchesSectionHeader.xib */; };
-		8A3458B71D1AB0F00068B627 /* FFTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3458B61D1AB0F00068B627 /* FFTableViewController.swift */; };
-		8A3458BB1D1AB23C0068B627 /* FFPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3458B91D1AB23C0068B627 /* FFPageViewController.swift */; };
-		8A3458BC1D1AB23C0068B627 /* FFPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A3458BA1D1AB23C0068B627 /* FFPageViewController.xib */; };
+		8A42C35F1D26629F00209C8D /* FFChampionshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A42C3541D26629F00209C8D /* FFChampionshipView.swift */; };
+		8A42C3601D26629F00209C8D /* FFChampionshipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A42C3551D26629F00209C8D /* FFChampionshipViewController.swift */; };
+		8A42C3611D26629F00209C8D /* FFChampionshipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A42C3561D26629F00209C8D /* FFChampionshipViewController.xib */; };
+		8A42C3621D26629F00209C8D /* FFMatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A42C3581D26629F00209C8D /* FFMatchCell.swift */; };
+		8A42C3631D26629F00209C8D /* FFMatchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A42C3591D26629F00209C8D /* FFMatchCell.xib */; };
+		8A42C3661D26629F00209C8D /* FFStageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A42C35D1D26629F00209C8D /* FFStageCell.swift */; };
+		8A42C3671D26629F00209C8D /* FFStageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A42C35E1D26629F00209C8D /* FFStageCell.xib */; };
+		8A42C36B1D26696200209C8D /* FFChampionship+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A42C3691D26696200209C8D /* FFChampionship+CoreDataProperties.swift */; };
+		8A42C36C1D26696200209C8D /* FFChampionship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A42C36A1D26696200209C8D /* FFChampionship.swift */; };
+		8A46E35C1D1D12FD00E12B29 /* FFStage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A46E35A1D1D12FD00E12B29 /* FFStage+CoreDataProperties.swift */; };
+		8A46E35D1D1D12FD00E12B29 /* FFStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A46E35B1D1D12FD00E12B29 /* FFStage.swift */; };
 		8A4EDDAB1D193917007373DE /* GNKCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4EDDAA1D193917007373DE /* GNKCircleView.swift */; };
 		8AC943FE1D056D2200791FC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC943EF1D056D2200791FC8 /* AppDelegate.swift */; };
 		8AC944001D056D2200791FC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AC943F21D056D2200791FC8 /* Assets.xcassets */; };
@@ -21,9 +27,6 @@
 		8AC9440B1D056E3D00791FC8 /* FFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9440A1D056E3D00791FC8 /* FFViewController.swift */; };
 		8AC944121D056F0500791FC8 /* FFContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9440D1D056F0500791FC8 /* FFContext.swift */; };
 		8AC944171D05725200791FC8 /* FFMatchesContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC944161D05725200791FC8 /* FFMatchesContext.swift */; };
-		8AC944211D0597F100791FC8 /* FFMatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC944201D0597F100791FC8 /* FFMatchesViewController.swift */; };
-		8AC944231D05980A00791FC8 /* FFMatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC944221D05980A00791FC8 /* FFMatchesView.swift */; };
-		8AC9443E1D05BA9D00791FC8 /* FFMatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9443D1D05BA9D00791FC8 /* FFMatchCell.swift */; };
 		8AC944441D06AC8100791FC8 /* FootFight.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8AC944421D06AC8100791FC8 /* FootFight.xcdatamodeld */; };
 		8AC944831D0819F900791FC8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AC944851D0819F900791FC8 /* Localizable.strings */; };
 		8AC944861D081A0D00791FC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AC944881D081A0D00791FC8 /* Main.storyboard */; };
@@ -43,11 +46,17 @@
 /* Begin PBXFileReference section */
 		21A3737004B2C6E14F1DD408 /* Pods_FootFight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootFight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5163C1C05043A4A75485CDCA /* Pods-FootFight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootFight.release.xcconfig"; path = "Pods/Target Support Files/Pods-FootFight/Pods-FootFight.release.xcconfig"; sourceTree = "<group>"; };
-		8A3458B11D1A80190068B627 /* FFMatchesSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFMatchesSectionHeader.swift; sourceTree = "<group>"; };
-		8A3458B31D1A80390068B627 /* FFMatchesSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFMatchesSectionHeader.xib; sourceTree = "<group>"; };
-		8A3458B61D1AB0F00068B627 /* FFTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFTableViewController.swift; sourceTree = "<group>"; };
-		8A3458B91D1AB23C0068B627 /* FFPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFPageViewController.swift; sourceTree = "<group>"; };
-		8A3458BA1D1AB23C0068B627 /* FFPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFPageViewController.xib; sourceTree = "<group>"; };
+		8A42C3541D26629F00209C8D /* FFChampionshipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFChampionshipView.swift; sourceTree = "<group>"; };
+		8A42C3551D26629F00209C8D /* FFChampionshipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFChampionshipViewController.swift; sourceTree = "<group>"; };
+		8A42C3561D26629F00209C8D /* FFChampionshipViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFChampionshipViewController.xib; sourceTree = "<group>"; };
+		8A42C3581D26629F00209C8D /* FFMatchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFMatchCell.swift; sourceTree = "<group>"; };
+		8A42C3591D26629F00209C8D /* FFMatchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFMatchCell.xib; sourceTree = "<group>"; };
+		8A42C35D1D26629F00209C8D /* FFStageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFStageCell.swift; sourceTree = "<group>"; };
+		8A42C35E1D26629F00209C8D /* FFStageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFStageCell.xib; sourceTree = "<group>"; };
+		8A42C3691D26696200209C8D /* FFChampionship+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FFChampionship+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8A42C36A1D26696200209C8D /* FFChampionship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFChampionship.swift; sourceTree = "<group>"; };
+		8A46E35A1D1D12FD00E12B29 /* FFStage+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FFStage+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8A46E35B1D1D12FD00E12B29 /* FFStage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFStage.swift; sourceTree = "<group>"; };
 		8A4EDDAA1D193917007373DE /* GNKCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GNKCircleView.swift; sourceTree = "<group>"; };
 		8AC943C71D0568E900791FC8 /* FootFight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootFight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC943EF1D056D2200791FC8 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,9 +67,6 @@
 		8AC9440A1D056E3D00791FC8 /* FFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFViewController.swift; sourceTree = "<group>"; };
 		8AC9440D1D056F0500791FC8 /* FFContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFContext.swift; sourceTree = "<group>"; };
 		8AC944161D05725200791FC8 /* FFMatchesContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFMatchesContext.swift; sourceTree = "<group>"; };
-		8AC944201D0597F100791FC8 /* FFMatchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFMatchesViewController.swift; sourceTree = "<group>"; };
-		8AC944221D05980A00791FC8 /* FFMatchesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFMatchesView.swift; sourceTree = "<group>"; };
-		8AC9443D1D05BA9D00791FC8 /* FFMatchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFMatchCell.swift; sourceTree = "<group>"; };
 		8AC944431D06AC8100791FC8 /* FootFight.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FootFight.xcdatamodel; sourceTree = "<group>"; };
 		8AC944841D0819F900791FC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8AC944871D081A0D00791FC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,21 +107,52 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		8A3458B51D1AB0B50068B627 /* FFTableViewController */ = {
+		8A42C3531D26629F00209C8D /* FFChampionshipViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8A3458B61D1AB0F00068B627 /* FFTableViewController.swift */,
+				8A42C3541D26629F00209C8D /* FFChampionshipView.swift */,
+				8A42C3551D26629F00209C8D /* FFChampionshipViewController.swift */,
+				8A42C3561D26629F00209C8D /* FFChampionshipViewController.xib */,
+				8A42C35C1D26629F00209C8D /* FFStageCell */,
+				8A42C3571D26629F00209C8D /* FFMatchCell */,
 			);
-			path = FFTableViewController;
+			path = FFChampionshipViewController;
 			sourceTree = "<group>";
 		};
-		8A3458B81D1AB20E0068B627 /* FFPageViewController */ = {
+		8A42C3571D26629F00209C8D /* FFMatchCell */ = {
 			isa = PBXGroup;
 			children = (
-				8A3458B91D1AB23C0068B627 /* FFPageViewController.swift */,
-				8A3458BA1D1AB23C0068B627 /* FFPageViewController.xib */,
+				8A42C3581D26629F00209C8D /* FFMatchCell.swift */,
+				8A42C3591D26629F00209C8D /* FFMatchCell.xib */,
 			);
-			path = FFPageViewController;
+			path = FFMatchCell;
+			sourceTree = "<group>";
+		};
+		8A42C35C1D26629F00209C8D /* FFStageCell */ = {
+			isa = PBXGroup;
+			children = (
+				8A42C35D1D26629F00209C8D /* FFStageCell.swift */,
+				8A42C35E1D26629F00209C8D /* FFStageCell.xib */,
+			);
+			path = FFStageCell;
+			sourceTree = "<group>";
+		};
+		8A42C3681D26694A00209C8D /* FFChampionship */ = {
+			isa = PBXGroup;
+			children = (
+				8A42C3691D26696200209C8D /* FFChampionship+CoreDataProperties.swift */,
+				8A42C36A1D26696200209C8D /* FFChampionship.swift */,
+			);
+			path = FFChampionship;
+			sourceTree = "<group>";
+		};
+		8A46E3591D1D0A1A00E12B29 /* FFStage */ = {
+			isa = PBXGroup;
+			children = (
+				8A46E35A1D1D12FD00E12B29 /* FFStage+CoreDataProperties.swift */,
+				8A46E35B1D1D12FD00E12B29 /* FFStage.swift */,
+			);
+			path = FFStage;
 			sourceTree = "<group>";
 		};
 		8A4EDDA91D193900007373DE /* GNKCircleView */ = {
@@ -207,6 +244,8 @@
 			children = (
 				8AC944421D06AC8100791FC8 /* FootFight.xcdatamodeld */,
 				8AC945171D09B63300791FC8 /* FFUser */,
+				8A42C3681D26694A00209C8D /* FFChampionship */,
+				8A46E3591D1D0A1A00E12B29 /* FFStage */,
 				8AC9443F1D05CB2700791FC8 /* FFMatch */,
 			);
 			path = Models;
@@ -234,9 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				8AC944091D056E3D00791FC8 /* FFViewController */,
-				8A3458B81D1AB20E0068B627 /* FFPageViewController */,
-				8A3458B51D1AB0B50068B627 /* FFTableViewController */,
-				8AC9441D1D05979800791FC8 /* FFMatchesViewController */,
+				8A42C3531D26629F00209C8D /* FFChampionshipViewController */,
 				B0BD12F61D0F1A6D008D803D /* FFPredictionAlertViewController */,
 			);
 			path = "View Controllers";
@@ -264,18 +301,6 @@
 				8AC944161D05725200791FC8 /* FFMatchesContext.swift */,
 			);
 			path = FFMatchesContext;
-			sourceTree = "<group>";
-		};
-		8AC9441D1D05979800791FC8 /* FFMatchesViewController */ = {
-			isa = PBXGroup;
-			children = (
-				8AC944201D0597F100791FC8 /* FFMatchesViewController.swift */,
-				8AC944221D05980A00791FC8 /* FFMatchesView.swift */,
-				8AC9443D1D05BA9D00791FC8 /* FFMatchCell.swift */,
-				8A3458B11D1A80190068B627 /* FFMatchesSectionHeader.swift */,
-				8A3458B31D1A80390068B627 /* FFMatchesSectionHeader.xib */,
-			);
-			path = FFMatchesViewController;
 			sourceTree = "<group>";
 		};
 		8AC9443F1D05CB2700791FC8 /* FFMatch */ = {
@@ -405,11 +430,12 @@
 			files = (
 				8AC944831D0819F900791FC8 /* Localizable.strings in Resources */,
 				8AC944011D056D2200791FC8 /* LaunchScreen.storyboard in Resources */,
-				8A3458B41D1A80390068B627 /* FFMatchesSectionHeader.xib in Resources */,
-				8A3458BC1D1AB23C0068B627 /* FFPageViewController.xib in Resources */,
+				8A42C3611D26629F00209C8D /* FFChampionshipViewController.xib in Resources */,
+				8A42C3671D26629F00209C8D /* FFStageCell.xib in Resources */,
 				8AC944001D056D2200791FC8 /* Assets.xcassets in Resources */,
 				B0BD12FC1D0F1A6D008D803D /* FFPredictionAlertViewController.xib in Resources */,
 				8AC944861D081A0D00791FC8 /* Main.storyboard in Resources */,
+				8A42C3631D26629F00209C8D /* FFMatchCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,23 +494,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A42C3601D26629F00209C8D /* FFChampionshipViewController.swift in Sources */,
 				8AC945201D09B67000791FC8 /* FFUser+CoreDataProperties.swift in Sources */,
-				8AC944211D0597F100791FC8 /* FFMatchesViewController.swift in Sources */,
 				8AC945211D09B67000791FC8 /* FFUser.swift in Sources */,
 				8AC943FE1D056D2200791FC8 /* AppDelegate.swift in Sources */,
 				8AC945251D0AAC9E00791FC8 /* FFMatch.swift in Sources */,
 				8AC944441D06AC8100791FC8 /* FootFight.xcdatamodeld in Sources */,
 				B0BD12FA1D0F1A6D008D803D /* FFPredictionAlertView.swift in Sources */,
-				8A3458B71D1AB0F00068B627 /* FFTableViewController.swift in Sources */,
 				B0BD12E91D0F16C3008D803D /* FFObservableObject.swift in Sources */,
 				8AC944171D05725200791FC8 /* FFMatchesContext.swift in Sources */,
+				8A42C3621D26629F00209C8D /* FFMatchCell.swift in Sources */,
 				8AC9440B1D056E3D00791FC8 /* FFViewController.swift in Sources */,
-				8A3458B21D1A80190068B627 /* FFMatchesSectionHeader.swift in Sources */,
+				8A42C36C1D26696200209C8D /* FFChampionship.swift in Sources */,
+				8A42C3661D26629F00209C8D /* FFStageCell.swift in Sources */,
+				8A42C36B1D26696200209C8D /* FFChampionship+CoreDataProperties.swift in Sources */,
+				8A42C35F1D26629F00209C8D /* FFChampionshipView.swift in Sources */,
+				8A46E35C1D1D12FD00E12B29 /* FFStage+CoreDataProperties.swift in Sources */,
 				B0BD12F31D0F19C8008D803D /* GNKAlertViewController.swift in Sources */,
-				8AC9443E1D05BA9D00791FC8 /* FFMatchCell.swift in Sources */,
-				8AC944231D05980A00791FC8 /* FFMatchesView.swift in Sources */,
-				8A3458BB1D1AB23C0068B627 /* FFPageViewController.swift in Sources */,
 				8AC9448C1D081A5100791FC8 /* FFUIConstants.swift in Sources */,
+				8A46E35D1D1D12FD00E12B29 /* FFStage.swift in Sources */,
 				8AC944071D056DA200791FC8 /* FFConstants.swift in Sources */,
 				8AC945241D0AAC9E00791FC8 /* FFMatch+CoreDataProperties.swift in Sources */,
 				B0BD12FB1D0F1A6D008D803D /* FFPredictionAlertViewController.swift in Sources */,

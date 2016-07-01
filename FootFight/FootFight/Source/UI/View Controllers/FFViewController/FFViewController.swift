@@ -12,6 +12,8 @@ class FFViewController : UIViewController {
     
     // MARK: - Accessors
     
+    var model: AnyObject?
+    
     var context: FFContext? {
         willSet(newValue) {
             newValue!.removeObserver(self)

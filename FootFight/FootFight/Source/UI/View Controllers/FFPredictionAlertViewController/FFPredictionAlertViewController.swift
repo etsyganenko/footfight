@@ -37,8 +37,7 @@ class FFPredictionAlertViewController: GNKAlertViewController,
     // MARK: - Class Methods
     
     class func showPredictionAlertOnController(controller: UIViewController,
-                                               with model: FFMatch,
-                                submitButtonActionHandler: (() -> Void)?)
+                                               with model: FFMatch)
     {
         let alertController = FFPredictionAlertViewController()
         

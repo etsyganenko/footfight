@@ -1,5 +1,5 @@
 //
-//  FFMatchesView.swift
+//  FFChampionshipView.swift
 //  FootFight
 //
 //  Created by Genek on 6/6/16.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class FFMatchesView: UIView {
+class FFChampionshipView: UIView {
     
     @IBOutlet var totalScoreLabel: UILabel?
     
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet var collectionView: UICollectionView?
 }

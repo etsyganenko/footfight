@@ -17,6 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         MagicalRecord.setupCoreDataStackWithStoreNamed(kFFCoreDataStoreName)
         
+        let window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        let championshipViewController = FFChampionshipViewController()
+        championshipViewController.model = FFChampionship.MR_findFirstOrCreateByAttribute(kFFChampionshipIDKey, withValue: kFFEURO2016)
+        
+        window.rootViewController = championshipViewController
+        window.makeKeyAndVisible()
+        
+        self.window = window
+        
         return true
     }
 

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15F34" minimumToolsVersion="Xcode 7.0">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15E65" minimumToolsVersion="Xcode 7.0">
+    <entity name="FFChampionship" representedClassName=".FFChampionship" syncable="YES">
+        <attribute name="championshipID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="stagesSet" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FFStage" inverseName="championship" inverseEntity="FFStage" syncable="YES"/>
+    </entity>
     <entity name="FFMatch" representedClassName="FFMatch" syncable="YES">
         <attribute name="awayTeamGoals" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="awayTeamGoalsPrediction" optional="YES" attributeType="Integer 16" defaultValueString="-1" syncable="YES"/>
@@ -10,12 +15,21 @@
         <attribute name="matchDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="matchday" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="matchID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="stage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FFStage" inverseName="matchesSet" inverseEntity="FFStage" syncable="YES"/>
+    </entity>
+    <entity name="FFStage" representedClassName=".FFStage" syncable="YES">
+        <attribute name="stageID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stageIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="championship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FFChampionship" inverseName="stagesSet" inverseEntity="FFChampionship" syncable="YES"/>
+        <relationship name="matchesSet" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FFMatch" inverseName="stage" inverseEntity="FFMatch" syncable="YES"/>
     </entity>
     <entity name="FFUser" representedClassName="FFUser" syncable="YES">
         <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="FFMatch" positionX="-63" positionY="-18" width="128" height="180"/>
+        <element name="FFMatch" positionX="-63" positionY="-18" width="128" height="195"/>
+        <element name="FFStage" positionX="-54" positionY="54" width="128" height="105"/>
         <element name="FFUser" positionX="-54" positionY="63" width="128" height="60"/>
+        <element name="FFChampionship" positionX="-54" positionY="63" width="128" height="90"/>
     </elements>
 </model>
