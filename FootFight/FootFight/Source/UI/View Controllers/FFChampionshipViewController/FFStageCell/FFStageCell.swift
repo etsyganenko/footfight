@@ -40,7 +40,11 @@ class FFStageCell: UICollectionViewCell,
     // MARK: - UITableViewDataSource
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (self.model?.matches?.count)!
+        guard let section = self.fetchedResultsController.sections?[section] else {
+            return 0
+        }
+        
+        return section.numberOfObjects
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -106,17 +110,17 @@ class FFStageCell: UICollectionViewCell,
         switch(type) {
         case .Insert:
             if let newIndexPath = newIndexPath {
-                collectionView.insertItemsAtIndexPaths([newIndexPath])
+                tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Fade)
             }
             
         case .Delete:
             if let indexPath = indexPath {
-                collectionView.deleteItemsAtIndexPaths([indexPath])
+                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             }
             
         case .Update:
             if let indexPath = indexPath {
-                guard let cell = collectionView.cellForItemAtIndexPath(indexPath) as? FFStageCell else {
+                guard let cell = tableView.cellForRowAtIndexPath(indexPath) as? FFMatchCell else {
                     return
                 }
                 
@@ -130,21 +134,19 @@ class FFStageCell: UICollectionViewCell,
         case .Move:
             if let indexPath = indexPath {
                 if let newIndexPath = newIndexPath {
-                    collectionView.deleteItemsAtIndexPaths([indexPath])
-                    collectionView.insertItemsAtIndexPaths([newIndexPath])
+                    tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                    tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Fade)
                 }
             }
         }
-        
-        //        self.updateTotalScore()
     }
     
     func controllerWillChangeContent(controller: NSFetchedResultsController) {
-        
+        self.tableView?.beginUpdates()
     }
     
     func controllerDidChangeContent(controller: NSFetchedResultsController) {
-        
+        self.tableView?.endUpdates()
     }
 
 }

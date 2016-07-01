@@ -13,14 +13,17 @@ import CoreData
 class FFMatchesContext: FFContext {
     
     // MARK: - Accessors
+    
+    var championshipID: String?
 
     // MARK: - Initialization
     
-    override init(model: AnyObject?) {
-        super.init(model: model)
+    init(championshipID: String?) {
+        super.init()
         
         self.path = kFFMatchesPath
         self.url = kFFHost.stringByAppendingString(self.path!)
+        self.championshipID = championshipID
     }
     
     // MARK: - Public
@@ -54,8 +57,8 @@ class FFMatchesContext: FFContext {
                     let matchID = String(stageIndex).stringByAppendingString(homeTeamName).stringByAppendingString(awayTeamName)
                     
                     NSManagedObjectContext.MR_defaultContext().MR_saveWithBlockAndWait({ (localContext : NSManagedObjectContext!) in
-                        let championship = self.model as? FFChampionship
-                        let stage = FFStage.MR_findFirstOrCreateByAttribute(kFFStageIDKey, withValue: stageIndex, inContext: localContext)
+                        let championship = FFChampionship.MR_findFirstOrCreateByAttribute(kFFChampionshipIDKey, withValue: self.championshipID!, inContext: localContext)
+                        let stage = FFStage.MR_findFirstOrCreateByAttribute(kFFStageIDKey, withValue: stageIndex.stringValue, inContext: localContext)
                         let match = FFMatch.MR_findFirstOrCreateByAttribute(kFFMatchIDKey, withValue: matchID, inContext: localContext)
                         
                         stage.stageIndex = stageIndex

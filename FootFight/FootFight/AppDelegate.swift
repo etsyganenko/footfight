@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
         let championshipViewController = FFChampionshipViewController()
-        championshipViewController.model = FFChampionship.MR_findFirstOrCreateByAttribute(kFFChampionshipIDKey, withValue: kFFEURO2016)
+        championshipViewController.championshipID = kFFEURO2016
         
         window.rootViewController = championshipViewController
         window.makeKeyAndVisible()

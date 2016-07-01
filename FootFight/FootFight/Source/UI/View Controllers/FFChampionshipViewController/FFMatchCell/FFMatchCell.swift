@@ -2,7 +2,7 @@
 //  FFMatchCell.swift
 //  FootFight
 //
-//  Created by Genek on 6/6/16.
+//  Created by Yevgen on 7/1/16.
 //  Copyright © 2016 Genek. All rights reserved.
 //
 
@@ -68,8 +68,8 @@ class FFMatchCell: UITableViewCell {
             self.awayTeamGoalsPredictionButton?.setTitle(model.awayTeamGoalsPrediction?.stringValue, forState: UIControlState.Normal)
         }
         
-//        self.scorePredictionPickerView.selectRow((model.homeTeamGoalsPrediction?.integerValue)!, inComponent: FFScorePredictionComponents.homeTeamGoals.rawValue, animated: false)
-//        self.scorePredictionPickerView.selectRow((model.awayTeamGoalsPrediction?.integerValue)!, inComponent: FFScorePredictionComponents.awayTeamGoals.rawValue, animated: false)
+        //        self.scorePredictionPickerView.selectRow((model.homeTeamGoalsPrediction?.integerValue)!, inComponent: FFScorePredictionComponents.homeTeamGoals.rawValue, animated: false)
+        //        self.scorePredictionPickerView.selectRow((model.awayTeamGoalsPrediction?.integerValue)!, inComponent: FFScorePredictionComponents.awayTeamGoals.rawValue, animated: false)
         
         self.matchScoreLabel?.text = model.matchScore as String
         self.userScoreLabel?.text = model.userScoreString as String

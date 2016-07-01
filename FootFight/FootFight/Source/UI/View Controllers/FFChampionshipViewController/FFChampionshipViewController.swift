@@ -18,18 +18,21 @@ class FFChampionshipViewController: FFViewController,
     
     // MARK: - Accessors
     
+    var championshipID: String?
+    
     var mainView: FFChampionshipView? {
-        guard let stagesView = self.view else {
+        guard let championshipView = self.view else {
             return nil
         }
         
-        return stagesView as? FFChampionshipView
+        return championshipView as? FFChampionshipView
     }
     
     lazy var fetchedResultsController: NSFetchedResultsController = {
         let fetchRequest = NSFetchRequest(entityName: kFFStageEntityName)
 
-        fetchRequest.predicate = NSPredicate(format: "championship == %@", argumentArray: [self.model!])
+        let championship = FFChampionship.MR_findFirstOrCreateByAttribute(kFFChampionshipIDKey, withValue: self.championshipID!)
+        fetchRequest.predicate = NSPredicate(format: "championship == %@", argumentArray: [championship])
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: kFFStageIDKey, ascending: true)]
         
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
@@ -82,7 +85,7 @@ class FFChampionshipViewController: FFViewController,
             print("Fetch Error")
         }
         
-        self.context = FFMatchesContext(model: self.model)
+        self.context = FFMatchesContext(championshipID: self.championshipID)
         
         self.updateTotalScore()
         
@@ -91,11 +94,11 @@ class FFChampionshipViewController: FFViewController,
         }
         
         collectionView.addPullToRefreshHandler({ [weak self] in
-            self?.context = FFMatchesContext(model: self?.model)
+            self?.context = FFMatchesContext(championshipID: self?.championshipID)
         })
         
         collectionView.addInfiniteScrollingWithHandler({ [weak self] in
-            self?.context = FFMatchesContext(model: self?.model)
+            self?.context = FFMatchesContext(championshipID: self?.championshipID)
         })
     }
     

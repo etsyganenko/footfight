@@ -11,12 +11,12 @@
 		8A42C35F1D26629F00209C8D /* FFChampionshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A42C3541D26629F00209C8D /* FFChampionshipView.swift */; };
 		8A42C3601D26629F00209C8D /* FFChampionshipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A42C3551D26629F00209C8D /* FFChampionshipViewController.swift */; };
 		8A42C3611D26629F00209C8D /* FFChampionshipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A42C3561D26629F00209C8D /* FFChampionshipViewController.xib */; };
-		8A42C3621D26629F00209C8D /* FFMatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A42C3581D26629F00209C8D /* FFMatchCell.swift */; };
-		8A42C3631D26629F00209C8D /* FFMatchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A42C3591D26629F00209C8D /* FFMatchCell.xib */; };
 		8A42C3661D26629F00209C8D /* FFStageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A42C35D1D26629F00209C8D /* FFStageCell.swift */; };
 		8A42C3671D26629F00209C8D /* FFStageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A42C35E1D26629F00209C8D /* FFStageCell.xib */; };
 		8A42C36B1D26696200209C8D /* FFChampionship+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A42C3691D26696200209C8D /* FFChampionship+CoreDataProperties.swift */; };
 		8A42C36C1D26696200209C8D /* FFChampionship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A42C36A1D26696200209C8D /* FFChampionship.swift */; };
+		8A42C36F1D26A92500209C8D /* FFMatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A42C36D1D26A92500209C8D /* FFMatchCell.swift */; };
+		8A42C3701D26A92500209C8D /* FFMatchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A42C36E1D26A92500209C8D /* FFMatchCell.xib */; };
 		8A46E35C1D1D12FD00E12B29 /* FFStage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A46E35A1D1D12FD00E12B29 /* FFStage+CoreDataProperties.swift */; };
 		8A46E35D1D1D12FD00E12B29 /* FFStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A46E35B1D1D12FD00E12B29 /* FFStage.swift */; };
 		8A4EDDAB1D193917007373DE /* GNKCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4EDDAA1D193917007373DE /* GNKCircleView.swift */; };
@@ -49,12 +49,12 @@
 		8A42C3541D26629F00209C8D /* FFChampionshipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFChampionshipView.swift; sourceTree = "<group>"; };
 		8A42C3551D26629F00209C8D /* FFChampionshipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFChampionshipViewController.swift; sourceTree = "<group>"; };
 		8A42C3561D26629F00209C8D /* FFChampionshipViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFChampionshipViewController.xib; sourceTree = "<group>"; };
-		8A42C3581D26629F00209C8D /* FFMatchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFMatchCell.swift; sourceTree = "<group>"; };
-		8A42C3591D26629F00209C8D /* FFMatchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFMatchCell.xib; sourceTree = "<group>"; };
 		8A42C35D1D26629F00209C8D /* FFStageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFStageCell.swift; sourceTree = "<group>"; };
 		8A42C35E1D26629F00209C8D /* FFStageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFStageCell.xib; sourceTree = "<group>"; };
 		8A42C3691D26696200209C8D /* FFChampionship+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FFChampionship+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8A42C36A1D26696200209C8D /* FFChampionship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFChampionship.swift; sourceTree = "<group>"; };
+		8A42C36D1D26A92500209C8D /* FFMatchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFMatchCell.swift; sourceTree = "<group>"; };
+		8A42C36E1D26A92500209C8D /* FFMatchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFMatchCell.xib; sourceTree = "<group>"; };
 		8A46E35A1D1D12FD00E12B29 /* FFStage+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FFStage+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8A46E35B1D1D12FD00E12B29 /* FFStage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFStage.swift; sourceTree = "<group>"; };
 		8A4EDDAA1D193917007373DE /* GNKCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GNKCircleView.swift; sourceTree = "<group>"; };
@@ -122,8 +122,8 @@
 		8A42C3571D26629F00209C8D /* FFMatchCell */ = {
 			isa = PBXGroup;
 			children = (
-				8A42C3581D26629F00209C8D /* FFMatchCell.swift */,
-				8A42C3591D26629F00209C8D /* FFMatchCell.xib */,
+				8A42C36D1D26A92500209C8D /* FFMatchCell.swift */,
+				8A42C36E1D26A92500209C8D /* FFMatchCell.xib */,
 			);
 			path = FFMatchCell;
 			sourceTree = "<group>";
@@ -435,7 +435,7 @@
 				8AC944001D056D2200791FC8 /* Assets.xcassets in Resources */,
 				B0BD12FC1D0F1A6D008D803D /* FFPredictionAlertViewController.xib in Resources */,
 				8AC944861D081A0D00791FC8 /* Main.storyboard in Resources */,
-				8A42C3631D26629F00209C8D /* FFMatchCell.xib in Resources */,
+				8A42C3701D26A92500209C8D /* FFMatchCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,10 +503,10 @@
 				B0BD12FA1D0F1A6D008D803D /* FFPredictionAlertView.swift in Sources */,
 				B0BD12E91D0F16C3008D803D /* FFObservableObject.swift in Sources */,
 				8AC944171D05725200791FC8 /* FFMatchesContext.swift in Sources */,
-				8A42C3621D26629F00209C8D /* FFMatchCell.swift in Sources */,
 				8AC9440B1D056E3D00791FC8 /* FFViewController.swift in Sources */,
 				8A42C36C1D26696200209C8D /* FFChampionship.swift in Sources */,
 				8A42C3661D26629F00209C8D /* FFStageCell.swift in Sources */,
+				8A42C36F1D26A92500209C8D /* FFMatchCell.swift in Sources */,
 				8A42C36B1D26696200209C8D /* FFChampionship+CoreDataProperties.swift in Sources */,
 				8A42C35F1D26629F00209C8D /* FFChampionshipView.swift in Sources */,
 				8A46E35C1D1D12FD00E12B29 /* FFStage+CoreDataProperties.swift in Sources */,

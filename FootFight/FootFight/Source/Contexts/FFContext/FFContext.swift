@@ -20,15 +20,7 @@ class FFContext: FRVObservableObject {
     
     // MARK: - Initialization
     
-    init(model: AnyObject?) {
-        self.model = model
-        
-        super.init()
-    }
-    
     // MARK: - Accessors
-
-    var model: AnyObject?
     
     var url: String?
     var path: String?
