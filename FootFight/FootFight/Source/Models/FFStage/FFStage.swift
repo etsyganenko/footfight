@@ -15,7 +15,7 @@ class FFStage: NSManagedObject {
     // MARK: - Accessors
     
     var matches: NSArray? {
-        return self.matchesSet?.sortedArrayUsingDescriptors([NSSortDescriptor(key: kFFStageIndexKey, ascending: true)])
+        return self.matchesSet?.sortedArrayUsingDescriptors([NSSortDescriptor(key: kFFMatchDateKey, ascending: true)])
     }
 
 }

@@ -81,9 +81,7 @@ class FFChampionshipViewController: FFViewController,
         
         do {
             try self.fetchedResultsController.performFetch()
-        } catch {
-            print("Fetch Error")
-        }
+        } catch {}
         
         self.context = FFMatchesContext(championshipID: self.championshipID)
         

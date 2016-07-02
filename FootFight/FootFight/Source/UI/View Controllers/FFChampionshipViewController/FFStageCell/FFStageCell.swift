@@ -17,7 +17,16 @@ class FFStageCell: UICollectionViewCell,
     
     // MARK: - Accessors
     
-    var model: FFStage?
+    var model: FFStage? {
+        willSet(newValue) {
+            
+        }
+        didSet(oldValue) {
+            do {
+                try self.fetchedResultsController.performFetch()
+            } catch {}
+        }
+    }
 
     @IBOutlet var tableView: UITableView?
     
@@ -36,6 +45,8 @@ class FFStageCell: UICollectionViewCell,
         
         return fetchedResultsController
     }()
+    
+    // MARK: - View Lifecycle
     
     // MARK: - UITableViewDataSource
     
